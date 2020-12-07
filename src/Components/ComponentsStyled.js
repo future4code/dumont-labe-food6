@@ -1,15 +1,8 @@
 import styled from "styled-components";
 
 
-export const BackgroundHome = styled.div`
-  display: flex;
-  align-items: center;
-  width: 100vw;
-  height: 100vh;
-  background-color: #e86e5a;
-`;
+ export const BackgroundHome = styled.div`
 
- export const BackgroundHome=styled.div`
 display:flex;
 align-items:center;
  width:100vw;
@@ -42,14 +35,11 @@ export const ImgLogo = styled.img`
   }
 `;
 
-  height: 200px;
- `
-
 export const HeaderContainer=styled.div`
     display: flex;
     align-items: center;
     width: 360px;
-    height: 64px
+    height: 64px;
     justify-content: space-between;
     border: 1px solid black;
     box-sizing: border-box;
