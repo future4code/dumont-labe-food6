@@ -1,9 +1,12 @@
 import React from 'react';
+import HomeCard from '../../Components/HomeCard/HomeCard';
 
-// import { Container } from './styles';
 
 function HomePage() {
-  return <div />;
+  return (
+    <HomeCard/>
+
+  )
 }
 
 export default HomePage;
