@@ -1,11 +1,11 @@
 export const goToBuy =(history)=>{
-    history.push('/Buy')
+    history.push('/comprar')
 }
 export const goToLoginPage =(history)=>{
-    history.push('/LoginPage')
+    history.push('/login')
 }
 export const goToSignUp =(history)=>{
-    history.push('/SignUp')
+    history.push('/cadastro')
 }
 export const goToHomePage =(history)=>{
     history.push('/')
