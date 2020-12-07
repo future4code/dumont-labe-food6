@@ -7,6 +7,6 @@ export const goToLoginPage =(history)=>{
 export const goToSignUp =(history)=>{
     history.push('/SignUp')
 }
-export const goToLogoPage =(history)=>{
+export const goToHomePage =(history)=>{
     history.push('/')
 }
