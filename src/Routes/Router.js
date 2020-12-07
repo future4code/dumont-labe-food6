@@ -1,3 +1,4 @@
+
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import HomePage from "../Screens/EnterSection/HomePage";
@@ -30,4 +31,3 @@ function Router() {
   );
 }
 
-export default Router;
