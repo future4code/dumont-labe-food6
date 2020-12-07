@@ -7,7 +7,7 @@ import Error from "../Screens/Error/Error";
 import FeedPage from "../Screens/Home/FeedPage";
 import SignUp from "../Screens/EnterSection/SignUp";
 
-function Router() {
+export default function Router() {
   return (
     <BrowserRouter>
       <Switch>
