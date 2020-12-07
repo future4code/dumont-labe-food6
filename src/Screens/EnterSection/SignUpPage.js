@@ -5,17 +5,19 @@ import { useForm } from '../../../hooks/useForm'
 import { signUp } from '../../Services/User'
 // import { useProtectPage } from '../../Hooks/UseProtectPage'
 import { TextField, Button } from '@material-ui/core'
+import VisibilityOffIcon from '@material-ui/icons/VisibilityOff'
+import VisibilityIcon from '@material-ui/icons/Visibility'
 
 
 
-function AdressPage() {
+function SignUpPage() {
+  const [showPassword, setShowPassword] = React.useState(false)
+
   const {form, onChange} = useForm({
-    street: "",
-    number: "",
-    neighbourhood: "",
-    city: "",
-    state: "",
-    complement: ""
+    name: "",
+    email: "",
+    cpf: "",
+    password: ""
   })
   
   // useProtectPage() //Proteção da página
@@ -33,77 +35,85 @@ function AdressPage() {
     signUp(form, history)
   }
 
+  // Função para mostrar a senha ou não
+  const handleShowPassword = () => {
+    if (showPassword) {
+      setShowPassword(false)
+    } else {
+      setShowPassword(true)
+      }
+    }
+
 
   return (
     <S.SignupPageContainer>
       {/* <Logo src={LogoPage}/> */}
       <S.ChevronLeftIconStyled/>
-      <S.LineHeader/>
+        <S.LineHeader/>
       <S.FormSignUp onSubmit={handleSubmit}>
-        <h3>Meu endereço</h3>
+        <h3>Cadastrar</h3>
         <TextField 
-          value={form.street} 
+          value={form.name} 
           onChange={handleInputChange}
           variant='outlined'
-          label='Logradouro'
-          placeholder='Rua/ Av.'
-          name='street'
+          label='Nome'
+          placeholder='Nome e sobrenome'
+          name='name'
           type='text'
           required
         />
         <br />
         <TextField 
-          value={form.number}
+          value={form.email}
           onChange={handleInputChange}
           variant='outlined'
-          label='Número'
+          label='E-mail'
           placeholder='email@email.com'
-          name='number'
-          type='number'
+          name='email'
+          type='email'
+          pattern='[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,}'
           required
         />
         <br />
         <TextField 
-          value={form.complement}
+          value={form.cpf}
           onChange={handleInputChange}
           variant= 'outlined'
-          label='Complemento'
-          placeholder='Apto./Bloco'
-          name='complement'
-          type='text'
+          label='CPF'
+          placeholder='000.000.000-00'
+          minlength="11"
+          name='cpf'
+          type='cpf'
+          pattern='\d{3}\.?\d{3}\.?\d{3}-?\d{2}'
           required
         />
         <br/>
         <TextField 
-          value={form.neighbourhood}
+          value={form.password}
           onChange={handleInputChange}
           variant= 'outlined'
-          label='Bairro'
-          placeholder='Bairro'
-          name='neighbourhood'
-          type='text'
+          label='Senha'
+          placeholder='Mínimo 6 caracteres'
+          minlength="6"
+          name='password'
           required
+          type={showPassword ? 'text' : 'password'}
+          InputProps={{
+            endAdornment: (
+              showPassword ? <VisibilityIcon onClick={handleShowPassword}/> : <VisibilityOffIcon onClick={handleShowPassword}/>
+            ),
+          }}
         />
         <br/>
         <TextField 
-          value={form.city}
+          value={form.password}
           onChange={handleInputChange}
           variant= 'outlined'
-          label='Cidade'
-          placeholder='Cidade 6 caracteres'
-          name='city'
-          type='text'
-          required
-        />
-        <br/>
-        <TextField 
-          value={form.state}
-          onChange={handleInputChange}
-          variant= 'outlined'
-          label='Estado'
-          placeholder='Estado'
-          name='state'
-          type='text'
+          label='Confirmar'
+          placeholder='Confirme a senha anterior'
+          minlength="6"
+          name='password'
+          type='password'
           required
         />
         <br/>
@@ -112,10 +122,10 @@ function AdressPage() {
           color="primary"
           type="submit"
         >
-          SALVAR
+          CRIAR
         </Button>
       </S.FormSignUp>
     </S.SignupPageContainer>
   );
 }
-export default AdressPage;
+export default SignUpPage;
