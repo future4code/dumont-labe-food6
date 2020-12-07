@@ -7,6 +7,15 @@ align-items:center;
  height:100vh;
  background-color: #e86e5a;
  `
+  export const Footer=styled.div`
+  display:flex;
+  justify-content:space-between;
+  background-color: #e86e5a;
+  width:360px;
+  height:49px;
+  align-items:center;
+  padding:5px;
+   `
 
  export const ImgLogo=styled.img`
   display:flex;
@@ -18,5 +27,4 @@ align-items:center;
   &:hover {
     width: 200px;
   height: 200px;
-
  `
