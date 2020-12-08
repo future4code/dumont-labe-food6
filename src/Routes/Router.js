@@ -6,6 +6,7 @@ import LoginPage from "../Screens/EnterSection/LoginPage";
 import Error from "../Screens/Error/Error";
 import FeedPage from "../Screens/Home/FeedPage";
 import SignUp from "../Screens/EnterSection/SignUpPage"
+import ShoppingCart from "../Screens/EnterSection/ShoppingCart"
 
 export default function Router() {
   return (
@@ -22,6 +23,9 @@ export default function Router() {
         </Route>
         <Route exact path="/pagina-principal">
           <FeedPage />
+        </Route>
+        <Route exact path="/carrinho">
+        <ShoppingCart />
         </Route>
         <Route>
           <Error />

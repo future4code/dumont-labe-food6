@@ -10,3 +10,6 @@ export const goToSignUp =(history)=>{
 export const goToHomePage =(history)=>{
     history.push('/')
 }
+export const goToShoppingCart =(history)=>{
+    history.push('/carrinho')
+}
