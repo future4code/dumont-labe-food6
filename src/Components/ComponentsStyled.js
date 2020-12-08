@@ -37,7 +37,6 @@ export const HeaderContainer = styled.div`
     width: 360px;
     height: 64px;
     justify-content: flex-end;
-    border: 1px solid black;
     box-sizing: border-box;
     padding: 5px 0;
     font-size: 14px;

@@ -4,37 +4,45 @@ import ChevronLeftIcon from '@material-ui/icons/ChevronLeft'
 
 
 // styled LoginPage //
-export const LoginPageContainer = styled.div`
+export const LoginContainer = styled.div`
   display: flex;
   flex-direction: column;
   text-align: center;
-  width: 85vw;
+  width: 96%;
   max-width: 465px;
   margin: 0 auto;
 `
 
-export const FormContainer = styled.form`
+export const FormLogin = styled.form`
   display: flex;
   flex-direction: column;
-  height: 38vh;
   justify-content: space-around;
+  height: 40vh;
+  width: 90vw;
+  margin-left: 3%;
 
 `
 
-export const TitlePage = styled.h2`
+export const TitleLogin = styled.p`
   font-family: Roboto, Helvetica, sans-serif;
-  margin: 15% 35%;
+  font-size: 16px;
+  margin: 8% 35%;
+`
+
+export const TitleLogoLogin = styled.img`
+  width: 150px;
+  margin: 20% 32% 4%;
 `
 // styled LoginPage //
 
 
 
 // styled SignUpPage //
-export const SignupPageContainer = styled.div`
+export const SignupContainer = styled.div`
   display: flex;
   flex-direction: column;
   text-align: center;
-  width: 85vw;
+  width: 96%;
   max-width: 465px;
   margin: 0 auto;
 `
@@ -42,22 +50,60 @@ export const SignupPageContainer = styled.div`
 export const FormSignUp = styled.form`
   display: flex;
   flex-direction: column;
-  height: 30vh;
+  height: 25vh;
+  width: 90vw;
   justify-content: space-around;
-  margin-bottom: 15px;
+  margin-top: 30%;
+  margin-left: 3%;
+  margin-bottom: 5%;
 `
 
 export const TitleLogo = styled.img`
-  width: 200px;
-  margin: 18% 22% 4%;
+  width: 150px;
+  margin: 2% 32% 6%;
+`
+
+export const TitleSignUp = styled.p`
+  font-family: Roboto, Helvetica, sans-serif;
+  font-size: 16px;
+  margin: 25% 35% 5%;
 `
 
 export const ChevronLeftIconStyled = styled(ChevronLeftIcon)`
-  margin: 4% 0 2%;
+  margin-bottom: 2%;
 `
 
 export const LineHeader = styled.hr`
-  width: 108%;
+  width: 100%;
 `
 // styled SignUpPage //
+
+
+// styled AdressPage //
+export const AdressContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 96%;
+  max-width: 465px;
+  margin: 0 auto;
+`
+
+export const FormAdress= styled.form`
+  display: flex;
+  flex-direction: column;
+  height: 20vh;
+  width: 90vw;
+  justify-content: space-around;
+  margin-top: 30%;
+  margin-left: 3%;
+  margin-bottom: 5%;
+`
+
+export const TitleAdress = styled.p`
+  font-family: Roboto, Helvetica, sans-serif;
+  font-size: 16px;
+  margin: 55% 30% 5%;
+`
+// styled AdressPage //
 
