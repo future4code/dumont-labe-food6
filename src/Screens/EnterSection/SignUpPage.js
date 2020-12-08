@@ -7,6 +7,9 @@ import { signUp } from '../../Services/User'
 import { TextField, Button } from '@material-ui/core'
 import VisibilityOffIcon from '@material-ui/icons/VisibilityOff'
 import VisibilityIcon from '@material-ui/icons/Visibility'
+import Header from '../../Components/Header/Header'
+import LogoTitle from '../../Assets/logotitle.svg'
+import { goToLoginPage } from '../../Routes/Cordinator'
 
 
 
@@ -46,12 +49,13 @@ function SignUpPage() {
 
 
   return (
-    <S.SignupPageContainer>
-      {/* <Logo src={LogoPage}/> */}
-      <S.ChevronLeftIconStyled/>
+    <S.SignupContainer>
+        <Header/>
+        <S.ChevronLeftIconStyled onClick={() => goToLoginPage(history)}/>
         <S.LineHeader/>
-      <S.FormSignUp onSubmit={handleSubmit}>
-        <h3>Cadastrar</h3>
+        <S.TitleLogo src={LogoTitle}/>
+      <S.FormAdress onSubmit={handleSubmit}>
+        <S.TitleSignUp>Cadastrar</S.TitleSignUp>
         <TextField 
           value={form.name} 
           onChange={handleInputChange}
@@ -124,8 +128,8 @@ function SignUpPage() {
         >
           CRIAR
         </Button>
-      </S.FormSignUp>
-    </S.SignupPageContainer>
+      </S.FormAdress>
+    </S.SignupContainer>
   );
 }
 export default SignUpPage;
