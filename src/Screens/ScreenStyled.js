@@ -196,4 +196,69 @@ export const MaoSantaBurguer = styled.div`
   height: 112.6px;
   object-fit: contain;
 `
+
+export const NomeDoItem = styled.div` 
+  width: 166px;
+  height: 18px;
+  margin: 0 49px 6px 0;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.39px;
+  color: #e86e5a;
+`
+export const ItensDoLanche = styled.div` 
+  width: 198px;
+  height: 30px;
+  margin: 6px 17px 6px 0;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.34px;
+  color: #b8b8b8;
+`
+
+export const Preco = styled.div` 
+  width: 108px;
+  height: 19px;
+  margin: 6px 17px 15px 0;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.39px;
+  color: var(--black);
+`
+
+export const RectangleAdd = styled.div` 
+  width: 90px;
+  height: 31px;
+  margin: 9px 0 0 17px;
+  padding: 8px 20.5px 9px 21.5px;
+  border-radius: 8px;
+  border: solid 1px var(--black);
+`
+
+export const Adicionar = styled.div` 
+  width: 48px;
+  height: 14px;
+  font-family: Roboto;
+  font-size: 12px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.29px;
+  text-align: center;
+  color: var(--black);
+`
+
 // styled RestaurantPage //

@@ -2,7 +2,7 @@ import React from 'react'
 import * as S from '../ScreenStyled'
 import HeaderRestaurant from '../../Components/Header/HeaderRestaurant'
 import Hamburguer from '../../Assets/hamburguer.png'
-import MaoSanta from '../../Assets/maosantaburguer.png'
+import MaoSanta from '../../Assets/burguerpqn.jpg'
 
 function Restaurant() {
     return( 
@@ -19,7 +19,10 @@ function Restaurant() {
     <S.Path />
     <S.Rectangle>
         <S.MaoSantaBurguer> <img img src = {MaoSanta}/> </S.MaoSantaBurguer>
-
+    <S.NomeDoItem>Bullguer</S.NomeDoItem>
+    <S.ItensDoLanche>Pão, carne. queijo, picles e molho.</S.ItensDoLanche>
+    <S.Preco>R$20,00</S.Preco>
+    <S.RectangleAdd><S.Adicionar>adicionar</S.Adicionar></S.RectangleAdd>
     </S.Rectangle>
     </S.Restaurant>
     
