@@ -383,7 +383,7 @@ export const FormEditAdress= styled.form`
   display: flex;
   flex-direction: column;
   height: 20vh;
-  width: 90vw;
+  width: 21vw;
   justify-content: space-around;
   margin-top: 50%;
   margin-left: 3%;
