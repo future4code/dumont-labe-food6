@@ -4,7 +4,6 @@ import * as S from '../ScreenStyled'
 import { useHistory } from 'react-router-dom'
 import { useForm } from '../../Hooks/UseForm'
 import { login } from '../../Services/User'
-// import { useProtectPage } from '../../Hooks/UseProtectPage'
 import { TextField, Button } from '@material-ui/core'
 import VisibilityOffIcon from '@material-ui/icons/VisibilityOff'
 import VisibilityIcon from '@material-ui/icons/Visibility'
@@ -12,7 +11,7 @@ import { goToSignUp } from '../../Routes/Cordinator'
 import LogoTitle from '../../Assets/logotitle.svg'
 import Header from '../../Components/Header/Header'
 
-
+{/* ------ESTILIZAÇÃO OK -------     */}
 
 function LoginPage() {
   const [showPassword, setShowPassword] = React.useState(false)
@@ -52,9 +51,12 @@ function LoginPage() {
   return (
       <S.Container>
         <Header/>
+        <S.Logo>
         <S.TitleLogoLogin src={LogoTitle}/>
-        <S.TitleLogin>Entrar</S.TitleLogin>
-        <S.FormLogin onSubmit={handleSubmit}>
+        </S.Logo>
+       <S.P><b>Entrar</b></S.P>
+
+        <S.FormInputsLogin onSubmit={handleSubmit}>
           <TextField
             value={form.email}
             onChange={handleInputChange}
@@ -83,6 +85,10 @@ function LoginPage() {
               ),
             }}
           />
+             </S.FormInputsLogin>
+
+          
+          <S.AreaButton>
           <Button 
             variant='contained'
             color="primary"
@@ -97,7 +103,8 @@ function LoginPage() {
             Não possui cadastro? 
             Clique aqui.
           </Button>
-        </S.FormLogin>
+          </S.AreaButton>
+     
       </S.Container>
   );
 }
