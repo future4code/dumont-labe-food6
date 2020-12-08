@@ -8,10 +8,10 @@ function ShoppingCart() {
   return (
     <S.Container>
         <Header title={"Meu Carrinho"}/>
-        <DeliveryAddress>
+        <div>
         <p>Endereço de entrega</p>
         <p>Rua Alessandra Vieira, 42</p>
-        </DeliveryAddress>
+        </div>
         <p>Bullger Vila Madalena</p>
         <p>R. Fradique Coutinho, 1136- Vila Madalena</p>
         <p>30- 45min</p>

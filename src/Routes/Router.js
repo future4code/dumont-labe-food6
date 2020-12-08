@@ -43,6 +43,7 @@ export default function Router() {
         </Route>
         <Route exact path="/editar-cadastro">
           <SignUpEditPage />
+          </Route>
         <Route exact path="/carrinho">
         <ShoppingCart />
         </Route>
