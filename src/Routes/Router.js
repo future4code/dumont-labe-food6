@@ -7,6 +7,9 @@ import Error from "../Screens/Error/Error";
 import FeedPage from "../Screens/Home/FeedPage";
 import SignUp from "../Screens/EnterSection/SignUpPage"
 import AdressPage from "../Screens/EnterSection/AdressPage";
+import ProfilePage from "../Screens/ProfileUser/ProfilePage"
+import AddressEditPage from "../Screens/ProfileUser/AddressEditPage"
+import SignUpEditPage from "../Screens/ProfileUser/SignUpEditPage"
 
 export default function Router() {
   return (
@@ -26,6 +29,15 @@ export default function Router() {
         </Route>
         <Route exact path="/pagina-principal">
           <FeedPage />
+        </Route>
+        <Route exact path="/meu-perfil">
+          <ProfilePage />
+        </Route>
+        <Route exact path="/editar-endereco">
+          <AddressEditPage />
+        </Route>
+        <Route exact path="/editar-cadastro">
+          <SignUpEditPage />
         </Route>
         <Route>
           <Error />
