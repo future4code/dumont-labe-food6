@@ -303,3 +303,28 @@ export const TitleAdress = styled.p`
   margin: 55% 30% 5%;
 `
 // styled AdressPage //
+
+
+// styled AdressEditPage //
+export const AdressEditContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 96%;
+  max-width: 465px;
+  margin: 0 auto;
+`
+
+export const FormEditAdress= styled.form`
+  display: flex;
+  flex-direction: column;
+  height: 20vh;
+  width: 90vw;
+  justify-content: space-around;
+  margin-top: 50%;
+  margin-left: 3%;
+  margin-bottom: 5%;
+`
+// styled AdressEditPage //
+
+// styled AdressPage //

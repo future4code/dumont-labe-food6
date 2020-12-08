@@ -11,6 +11,9 @@ import ShoppingCart from "../Screens/EnterSection/ShoppingCart"
 import Restaurant from "../Screens/Restaurants/Restaurant";
 
 import AdressPage from "../Screens/EnterSection/AdressPage";
+import ProfilePage from "../Screens/ProfileUser/ProfilePage"
+import AddressEditPage from "../Screens/ProfileUser/AddressEditPage"
+import SignUpEditPage from "../Screens/ProfileUser/SignUpEditPage"
 
 
 export default function Router() {
@@ -32,6 +35,14 @@ export default function Router() {
         <Route exact path="/pagina-principal">
           <FeedPage />
         </Route>
+        <Route exact path="/meu-perfil">
+          <ProfilePage />
+        </Route>
+        <Route exact path="/editar-endereco">
+          <AddressEditPage />
+        </Route>
+        <Route exact path="/editar-cadastro">
+          <SignUpEditPage />
         <Route exact path="/carrinho">
         <ShoppingCart />
         </Route>
