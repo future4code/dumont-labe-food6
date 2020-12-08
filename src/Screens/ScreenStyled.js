@@ -3,39 +3,50 @@ import styled from  'styled-components'
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft'
 
 
-// styled LoginPage //
+// styled LoginPage & SignUpPage OK//
 
-export const FormLogin = styled.form`
- 
-
+export const FormInputsLogin = styled.form`
+  display: flex;
+  flex-direction: column;
+  height: 20vh;
+  width: 25vw;
+  justify-content: space-around;
+  margin-top: 20%;
+  margin-left: 3%;
+  margin-bottom: 5%;
 `
-
-export const TitleLogin = styled.p`
- 
+export const FormInputsSignUp = styled.form`
+  display: flex;
+  flex-direction: column;
+  height: 20vh;
+  width: 25vw;
+  justify-content: space-around;
+  margin-top: 50%;
+  margin-left: 3%;
+  margin-bottom: 5%;
 `
-
 export const TitleLogoLogin = styled.img`
-
+ width: 150px;
+ `
+export const P=styled.p`
+text-align:center;
 `
-// styled LoginPage //
+export const Logo = styled.div`
+display:flex;
+align-items:center;
+justify-content:center;
+ `
+export const AreaButton = styled.div`
+display:flex;
+align-items:center;
+justify-content:center;
+flex-direction:column;
+margin-top:10px;
+ `
 
-
-
-// styled SignUpPage //
-
-
-export const FormSignUp = styled.form`
-  
-`
-
-export const TitleLogo = styled.img`
-  width: 70px;
- 
-
-`
 
 export const ChevronLeftIconStyled = styled(ChevronLeftIcon)`
-  margin-bottom: 2%;
+margin:0;
 `
 
 
@@ -344,4 +355,42 @@ export const TitleAdress = styled.p`
   margin: 55% 30% 5%;
 `
 // styled AdressPage //
+
+
+// styled FeedPage //
+
+export const RectangleFeed = styled.p` 
+  width: 328px;
+  height: 56px;
+  padding: 16px 8px 16px 17px;
+  border-radius: 2px;
+  border: solid 1px #b8b8b8;
+`
+
+
+
+// styled AdressEditPage //
+export const AdressEditContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 96%;
+  max-width: 465px;
+  margin: 0 auto;
+`
+
+export const FormEditAdress= styled.form`
+  display: flex;
+  flex-direction: column;
+  height: 20vh;
+  width: 90vw;
+  justify-content: space-around;
+  margin-top: 50%;
+  margin-left: 3%;
+  margin-bottom: 5%;
+`
+// styled AdressEditPage //
+
+// styled AdressPage //
+
 

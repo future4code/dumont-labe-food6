@@ -13,6 +13,20 @@ export const goToAdress =(history)=>{
 export const goToHomePage =(history)=>{
     history.push('/')
 }
+
+export const goToProfilePage =(history)=>{
+    history.push('/meu-perfil')
+}
+
+export const goToAddressEdit =(history)=>{
+    history.push('/editar-endereco')
+}
+
+export const goToSignUpEdit =(history)=>{
+    history.push('/editar-cadastro')
+}
+
+
 export const goToShoppingCart =(history)=>{
     history.push('/carrinho')
 }
