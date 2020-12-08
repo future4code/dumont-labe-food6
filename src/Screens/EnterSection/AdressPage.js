@@ -1,10 +1,12 @@
 import React from 'react'
 import * as S from '../ScreenStyled'
 import { useHistory } from 'react-router-dom';
-import { useForm } from '../../../hooks/useForm'
-import { signUp } from '../../Services/User'
+import { useForm } from '../../Hooks/UseForm'
+import { address } from '../../Services/User'
 // import { useProtectPage } from '../../Hooks/UseProtectPage'
 import { TextField, Button } from '@material-ui/core'
+import Header from '../../Components/Header/Header'
+import { goToSignUp } from '../../Routes/Cordinator'
 
 
 
@@ -30,17 +32,17 @@ function AdressPage() {
   const handleSubmit = (event) => {
     event.preventDefault()
     
-    signUp(form, history)
+    address(form, history)
   }
 
 
   return (
-    <S.SignupPageContainer>
-      {/* <Logo src={LogoPage}/> */}
-      <S.ChevronLeftIconStyled/>
-      <S.LineHeader/>
-      <S.FormSignUp onSubmit={handleSubmit}>
-        <h3>Meu endereço</h3>
+    <S.AdressContainer>
+      <Header/>
+        <S.ChevronLeftIconStyled onClick={() => goToSignUp(history)}/>
+        <S.LineHeader/>
+      <S.FormAdress onSubmit={handleSubmit}>
+        <S.TitleAdress>Meu endereço</S.TitleAdress>
         <TextField 
           value={form.street} 
           onChange={handleInputChange}
@@ -114,8 +116,8 @@ function AdressPage() {
         >
           SALVAR
         </Button>
-      </S.FormSignUp>
-    </S.SignupPageContainer>
+      </S.FormAdress>
+    </S.AdressContainer>
   );
 }
 export default AdressPage;

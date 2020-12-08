@@ -6,6 +6,7 @@ import LoginPage from "../Screens/EnterSection/LoginPage";
 import Error from "../Screens/Error/Error";
 import FeedPage from "../Screens/Home/FeedPage";
 import SignUp from "../Screens/EnterSection/SignUpPage"
+import AdressPage from "../Screens/EnterSection/AdressPage";
 
 export default function Router() {
   return (
@@ -19,6 +20,9 @@ export default function Router() {
         </Route>
         <Route exact path="/cadastro">
           <SignUp />
+        </Route>
+        <Route exact path="/cadastro/endereco">
+          <AdressPage />
         </Route>
         <Route exact path="/pagina-principal">
           <FeedPage />
