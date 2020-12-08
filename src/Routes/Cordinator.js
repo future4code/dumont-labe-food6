@@ -7,6 +7,9 @@ export const goToLoginPage =(history)=>{
 export const goToSignUp =(history)=>{
     history.push('/cadastro')
 }
+export const goToAdress =(history)=>{
+    history.push('/cadastro/endereco')
+}
 export const goToHomePage =(history)=>{
     history.push('/')
 }

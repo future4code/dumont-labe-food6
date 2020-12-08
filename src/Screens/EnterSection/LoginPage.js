@@ -10,6 +10,7 @@ import VisibilityOffIcon from '@material-ui/icons/VisibilityOff'
 import VisibilityIcon from '@material-ui/icons/Visibility'
 import { goToSignUp } from '../../Routes/Cordinator'
 import LogoTitle from '../../Assets/logotitle.svg'
+import Header from '../../Components/Header/Header'
 
 
 
@@ -49,10 +50,11 @@ function LoginPage() {
 
 
   return (
-      <S.LoginPageContainer>
-        <S.TitleLogo src={LogoTitle}/>
-        <h3>Entrar</h3>
-        <S.FormContainer onSubmit={handleSubmit}>
+      <S.LoginContainer>
+        <Header/>
+        <S.TitleLogoLogin src={LogoTitle}/>
+        <S.TitleLogin>Entrar</S.TitleLogin>
+        <S.FormLogin onSubmit={handleSubmit}>
           <TextField
             value={form.email}
             onChange={handleInputChange}
@@ -95,8 +97,8 @@ function LoginPage() {
             Não possui cadastro? 
             Clique aqui.
           </Button>
-        </S.FormContainer>
-      </S.LoginPageContainer>
+        </S.FormLogin>
+      </S.LoginContainer>
   );
 }
 export default LoginPage;
