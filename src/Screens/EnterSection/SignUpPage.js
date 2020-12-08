@@ -1,7 +1,7 @@
 import React from 'react'
 import * as S from '../ScreenStyled'
 import { useHistory } from 'react-router-dom';
-import { useForm } from '../../../hooks/useForm'
+import { useForm } from '../../Hooks/UseForm'
 import { signUp } from '../../Services/User'
 // import { useProtectPage } from '../../Hooks/UseProtectPage'
 import { TextField, Button } from '@material-ui/core'
