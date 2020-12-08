@@ -27,3 +27,6 @@ export const goToSignUpEdit =(history)=>{
 }
 
 
+export const goToShoppingCart =(history)=>{
+    history.push('/carrinho')
+}

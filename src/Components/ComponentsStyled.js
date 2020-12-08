@@ -1,12 +1,6 @@
 import styled from 'styled-components';
+import ChevronLeftIcon from '@material-ui/icons/ChevronLeft'
 
-export const BackgroundHome = styled.div`
- display:flex;
- align-items:center;
- width:100vw;
- height:100vh;
- background-color: #e86e5a;
- `;
 export const Footer = styled.div`
   display:flex;
   justify-content:space-between;
@@ -16,20 +10,9 @@ export const Footer = styled.div`
   padding:5px;
   box-sizing: border-box;
   border: 1px solid black;
+  bottom: 0;
+  position: fixed
    `;
-
-export const ImgLogo = styled.img`
-  display: flex;
-  text-align: center;
-  width: 126px;
-  height: 65px;
-  margin-left: 45%;
-  cursor: pointer;
-  &:hover {
-    width: 200px;
-  height: 200px;
-  }
- `;
 
 export const HeaderContainer = styled.div`
     display: flex;
@@ -47,6 +30,27 @@ export const HeaderContainer = styled.div`
         }
     `;
 
+export const HeaderContainerR = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    width: 85vw;
+    max-width: 465px;
+    height: 64px;
+    justify-content: flex-end;
+    border: 1px solid black;
+    box-sizing: border-box;
+    padding: 5px 0;
+    font-size: 14px;
+        p{
+            width:100%;
+            text-align: center;
+            font-size: 16px;
+        }
+    `;
+
+export const ChevronLeftIconStyled = styled(ChevronLeftIcon)`
+margin: 4% 0 2%;
+`
 export const HeaderStart = styled.div`
     display: flex;
 `

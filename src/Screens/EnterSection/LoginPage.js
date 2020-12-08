@@ -50,7 +50,7 @@ function LoginPage() {
 
 
   return (
-      <S.LoginContainer>
+      <S.Container>
         <Header/>
         <S.TitleLogoLogin src={LogoTitle}/>
         <S.TitleLogin>Entrar</S.TitleLogin>
@@ -98,7 +98,7 @@ function LoginPage() {
             Clique aqui.
           </Button>
         </S.FormLogin>
-      </S.LoginContainer>
+      </S.Container>
   );
 }
 export default LoginPage;

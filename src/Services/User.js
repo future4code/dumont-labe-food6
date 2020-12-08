@@ -1,6 +1,6 @@
 import React from 'react'
 import axios from 'axios'
-import BaseUrl from '../Constants/BaseUrl'
+import {BaseUrl} from '../Constants/BaseUrl'
 import { goToBuy, goToAdress } from '../Routes/Cordinator'
 
 
