@@ -87,6 +87,9 @@ export const image = styled.div`
   height: 120px;
   margin: 17px 16px 12px;
   object-fit: contain;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `
 
 // styled RestaurantPage //
