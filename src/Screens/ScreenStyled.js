@@ -91,5 +91,109 @@ export const image = styled.div`
   flex-direction: column;
   align-items: center;
 `
+export const RestaurantTitle = styled.div`
+  width: 328px;
+  height: 18px;
+  margin: 12px 16px 8px;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.39px;
+  color: #e86e5a;
+`
+export const Burger  = styled.div`
+  width: 104px;
+  height: 18px;
+  margin: 8px 8px 8px 16px;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.39px;
+  color: #b8b8b8;
+`
 
+export const TempoDeEntrega  = styled.div`
+  width: 104px;
+  height: 18px;
+  margin: 8px 8px 10px 16px;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.39px;
+  color: #b8b8b8;
+`
+
+
+export const Frete  = styled.div`
+  width: 104px;
+  height: 18px;
+  margin: 8px 128px 10px 8px;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.39px;
+  color: #b8b8b8;
+`
+
+
+export const Endereco  = styled.div`
+  width: 328px;
+  height: 18px;
+  margin: 10px 16px 16px;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.39px;
+  color: #b8b8b8;
+`
+
+export const Principais = styled.div`
+  width: 328px;
+  height: 18px;
+  margin: 16px 16px 8px;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.39px;
+  color: var(--black);
+`
+export const Path = styled.div`
+  width: 328px;
+  height: 1px;
+  margin: 0 0 6px;
+  border: solid 1px var(--black);
+`
+
+export const Rectangle = styled.div` 
+  width: 328px;
+  height: 112px;
+  margin: 7px 0 0;
+  padding: 18px 0 0 113px;
+  border-radius: 8px;
+  border: solid 1px #b8b8b8;
+`
+
+export const MaoSantaBurguer = styled.div` 
+  width: 97px;
+  height: 112.6px;
+  object-fit: contain;
+`
 // styled RestaurantPage //
