@@ -12,7 +12,6 @@ export const LoginContainer = styled.div`
   max-width: 465px;
   margin: 0 auto;
 `
-
 export const FormLogin = styled.form`
   display: flex;
   flex-direction: column;
@@ -78,6 +77,42 @@ export const LineHeader = styled.hr`
 `
 // styled SignUpPage //
 
+// styled ShoppingCart //
+export const Container = styled.div`
+ height:640px;
+ width:360px;
+ position: fixed;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+ box-sizing: border-box;
+ border: 1px solid black;
+ `;
+
+export const ContainerHome = styled.div`
+ background-color: #e86e5a;
+ height:640px;
+ width:360px;
+ position: fixed;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+ box-sizing: border-box;
+ `;
+
+export const ImgLogo = styled.img`
+display: flex;
+text-align: center;
+width: 126px;
+height: 65px;
+padding: 288px 117px 287px;
+cursor: pointer;
+&:hover {
+  width: 100px;
+  height: 50px;
+}
+`;
+=======
 
 // styled RestaurantPage //
 
@@ -280,7 +315,6 @@ export const Adicionar = styled.div`
 `
 
 // styled RestaurantPage //
-=======
 
 // styled AdressPage //
 export const AdressContainer = styled.div`
@@ -309,5 +343,3 @@ export const TitleAdress = styled.p`
   margin: 55% 30% 5%;
 `
 // styled AdressPage //
-
-
