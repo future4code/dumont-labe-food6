@@ -49,13 +49,12 @@ function SignUpPage() {
 
 
   return (
-    <S.SignupContainer>
+    <S.Container>
         <Header/>
         <S.ChevronLeftIconStyled onClick={() => goToLoginPage(history)}/>
-        <S.LineHeader/>
         <S.TitleLogo src={LogoTitle}/>
       <S.FormAdress onSubmit={handleSubmit}>
-        <S.TitleSignUp>Cadastrar</S.TitleSignUp>
+      <Header title={"Cadastrar"}/>
         <TextField 
           value={form.name} 
           onChange={handleInputChange}
@@ -129,7 +128,7 @@ function SignUpPage() {
           CRIAR
         </Button>
       </S.FormAdress>
-    </S.SignupContainer>
+    </S.Container>
   );
 }
 export default SignUpPage;

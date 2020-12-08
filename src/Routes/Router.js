@@ -34,6 +34,7 @@ export default function Router() {
         </Route>
         <Route exact path="/carrinho">
         <ShoppingCart />
+        </Route>
         <Route exact path="/restaurantes">
           <Restaurant />
         </Route>

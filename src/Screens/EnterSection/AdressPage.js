@@ -40,8 +40,7 @@ function AdressPage() {
     <S.AdressContainer>
       <Header/>
         <S.ChevronLeftIconStyled onClick={() => goToSignUp(history)}/>
-        <S.LineHeader/>
-      <S.FormAdress onSubmit={handleSubmit}>
+        <S.FormAdress onSubmit={handleSubmit}>
         <S.TitleAdress>Meu endereço</S.TitleAdress>
         <TextField 
           value={form.street} 
