@@ -60,3 +60,4 @@ export const LineHeader = styled.hr`
   width: 108%;
 `
 // styled SignUpPage //
+
