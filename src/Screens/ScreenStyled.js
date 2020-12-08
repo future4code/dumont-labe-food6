@@ -1,6 +1,7 @@
 // import React from 'react';
 import styled from  'styled-components'
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft'
+import EditIcon from '@material-ui/icons/Edit'
 
 
 // styled LoginPage & SignUpPage OK//
@@ -354,7 +355,7 @@ export const TitleAdress = styled.p`
   font-size: 16px;
   margin: 55% 30% 5%;
 `
-// styled AdressPage //
+
 
 
 // styled FeedPage //
@@ -402,7 +403,44 @@ export const FormEditSignUp= styled.form`
   margin-left: 3%;
   margin-bottom: 5%;
 `
-// styled AdressEditPage //
+
+
+// styled ProfilePage //
+export const InfoUserContainer = styled.div`
+  margin-top: 12%;
+  margin-left: 4%;
+  border-bottom: 1px solid gray;
+  border-top: 1px solid gray;
+  &:active{
+    background-color: #EEEEEE;
+  }
+`
+
+export const EditIconInfo = styled(EditIcon)`
+  float: right;
+  margin-top: 4%;
+  margin-right: 4%;
+`
+
+export const AddressUserContainer = styled.div`
+  margin-top: 4%;
+  margin-left: 4%;
+  border-bottom: 1px solid gray;
+  &:active{
+    background-color: #EEEEEE;
+  }
+` 
+
+export const HistoryUserContainer = styled.div`
+  margin-top: 8%;
+  margin-left: 4%;
+  border-bottom: 1px solid gray;
+  &:active{
+    background-color: #EEEEEE;
+  }
+`
+
+
 
 // styled AdressPage //
 

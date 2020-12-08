@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft'
+import { mainGray, mainColor } from '../Constants/Colors';
 
 export const Footer = styled.div`
   display:flex;
@@ -49,3 +50,32 @@ export const Divisao = styled.div`
   color: red;
   margin-top: 80px;
 `;
+
+
+// Styled HistoryCard //
+export const HistoryContainer = styled.div`
+  margin: 4% 5%;
+  overflow-y: scroll;
+  height: 200px;
+  display: grid;
+  row-gap: 1em;
+`
+
+export const InfoHistory = styled.div`
+  border: 1px solid ${mainGray};
+  border-radius: 10px;
+  font-size: 12px;
+  padding: 2% 4%;
+  height: 124px;
+`
+
+export const NameOrder = styled.p`
+font-size: ${props => `${props.fontSize}px`};
+  color: ${mainColor};
+  font-weight: bolder;
+`
+
+export const Price = styled.p`
+  font-weight: bolder;
+  font-size: ${props => `${props.fontSize}px`};
+`
