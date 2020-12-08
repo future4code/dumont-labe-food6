@@ -61,3 +61,32 @@ export const LineHeader = styled.hr`
 `
 // styled SignUpPage //
 
+// styled RestaurantPage //
+
+export const Restaurant = styled.div`  
+  height: 834px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 85vw;
+  max-width: 465px;
+  margin: 0 auto;
+  border: 1px solid black;
+  box-sizing: border-box;
+`
+
+
+export const title = styled.div`
+  height: 44px;
+  margin: 20px 92px 0 54px;
+  padding: 13px 45.5px 12px;
+`
+
+export const image = styled.div`
+  width: 328px;
+  height: 120px;
+  margin: 17px 16px 12px;
+  object-fit: contain;
+`
+
+// styled RestaurantPage //
