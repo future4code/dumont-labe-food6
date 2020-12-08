@@ -316,6 +316,18 @@ export const TitleAdress = styled.p`
 // styled AdressPage //
 
 
+// styled FeedPage //
+
+export const RectangleFeed = styled.p` 
+  width: 328px;
+  height: 56px;
+  padding: 16px 8px 16px 17px;
+  border-radius: 2px;
+  border: solid 1px #b8b8b8;
+`
+
+
+
 // styled AdressEditPage //
 export const AdressEditContainer = styled.div`
   display: flex;
@@ -339,3 +351,4 @@ export const FormEditAdress= styled.form`
 // styled AdressEditPage //
 
 // styled AdressPage //
+
