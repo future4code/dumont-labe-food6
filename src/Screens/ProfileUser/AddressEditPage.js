@@ -40,7 +40,7 @@ function AdressEditPage() {
     <S.AdressEditContainer>
       <Header title={'Endereco'}/>
         <S.ChevronLeftIconStyled onClick={() => goToSignUp(history)}/>
-        <S.LineHeader/>
+      
       <S.FormEditAdress onSubmit={handleSubmit}>
         <TextField 
           value={form.street} 
