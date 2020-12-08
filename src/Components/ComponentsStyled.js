@@ -30,23 +30,6 @@ export const HeaderContainer = styled.div`
         }
     `;
 
-export const HeaderContainerR = styled.div`
-    display: flex;
-    flex-wrap: wrap;
-    width: 85vw;
-    max-width: 465px;
-    height: 64px;
-    justify-content: flex-end;
-    border: 1px solid black;
-    box-sizing: border-box;
-    padding: 5px 0;
-    font-size: 14px;
-        p{
-            width:100%;
-            text-align: center;
-            font-size: 16px;
-        }
-    `;
 
 export const ChevronLeftIconStyled = styled(ChevronLeftIcon)`
 margin: 4% 0 2%;
