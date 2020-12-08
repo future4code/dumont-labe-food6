@@ -1,3 +1,4 @@
+
 import React from 'react';
 import * as S from '../../Components/ComponentsStyled'
 import Header from '../../Components/Header/Header';
@@ -9,6 +10,7 @@ function LoginPage() {
 <div></div>
 
   )
+
 }
 
 export default LoginPage;
