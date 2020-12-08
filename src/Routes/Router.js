@@ -5,7 +5,7 @@ import HomePage from "../Screens/EnterSection/HomePage";
 import LoginPage from "../Screens/EnterSection/LoginPage";
 import Error from "../Screens/Error/Error";
 import FeedPage from "../Screens/Home/FeedPage";
-import SignUp from "../Screens/EnterSection/SignUp";
+import SignUp from "../Screens/EnterSection/SignUpPage"
 
 export default function Router() {
   return (
