@@ -58,3 +58,8 @@ export const HeaderMain = styled.div`
 export const HeaderEnd = styled.div`
     display: flex;
 `
+export const Divisao = styled.div`
+  text-align: center;
+  color: red;
+  margin-top: 80px;
+`;
