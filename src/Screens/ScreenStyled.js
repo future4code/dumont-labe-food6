@@ -389,6 +389,19 @@ export const FormEditAdress= styled.form`
   margin-left: 3%;
   margin-bottom: 5%;
 `
+
+
+// styled SignUpEditPage //
+export const FormEditSignUp= styled.form`
+  display: flex;
+  flex-direction: column;
+  height: 20vh;
+  width: 21vw;
+  justify-content: space-around;
+  margin-top: 32%;
+  margin-left: 3%;
+  margin-bottom: 5%;
+`
 // styled AdressEditPage //
 
 // styled AdressPage //

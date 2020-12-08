@@ -32,3 +32,14 @@ export const address = (body, history) => {
       console.log(error.message)
   })
 }
+
+
+export const editProfile = (body, history) => {
+  axios.put(`${BaseUrl}/profile`, body).then(response => {
+      localStorage.setItem('token', response.data.token)
+      alert('Editado com sucesso!')
+      goToBuy(history)
+  }).catch(error => {
+      console.log(error.message)
+  })
+}
