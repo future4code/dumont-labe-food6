@@ -303,3 +303,14 @@ export const TitleAdress = styled.p`
   margin: 55% 30% 5%;
 `
 // styled AdressPage //
+
+// styled FeedPage //
+
+export const RectangleFeed = styled.p` 
+  width: 328px;
+  height: 56px;
+  padding: 16px 8px 16px 17px;
+  border-radius: 2px;
+  border: solid 1px #b8b8b8;
+`
+
