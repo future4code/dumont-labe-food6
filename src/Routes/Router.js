@@ -7,7 +7,6 @@ import Error from "../Screens/Error/Error";
 import FeedPage from "../Screens/Home/FeedPage";
 import SignUp from "../Screens/EnterSection/SignUpPage";
 import ShoppingCart from "../Screens/EnterSection/ShoppingCart";
-import Restaurant from "../Screens/Restaurants/Restaurant";
 import Restaurant from "../Screens/Restaurants/RestaurantPage";
 import AdressPage from "../Screens/EnterSection/AdressPage";
 import SearchPlaceHolderPage from "../Screens/Home/SearchPlaceHolderPage";
@@ -42,6 +41,7 @@ export default function Router() {
         </Route>
         <Route exact path="/resultados">
           <SearchResultsPage />
+        </Route>
         <Route exact path="/meu-perfil">
           <ProfilePage />
         </Route>

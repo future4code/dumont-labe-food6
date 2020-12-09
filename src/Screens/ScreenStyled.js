@@ -4,23 +4,21 @@ import styled from "styled-components";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import EditIcon from '@material-ui/icons/Edit'
 
-// styled LoginPage //
+// // styled LoginPage //
 
-export const FormLogin = styled.form``;
-export const TitleLogin = styled.p``;
-export const TitleLogoLogin = styled.img``;
-// styled LoginPage //
+// export const FormLogin = styled.form``;
+// export const TitleLogin = styled.p``;
+// export const TitleLogoLogin = styled.img``;
+// // styled LoginPage //
 
-// styled SignUpPage //
+// // styled SignUpPage //
 
-export const FormSignUp = styled.form``;
+// export const FormSignUp = styled.form``;
 export const TitleLogo = styled.img`
   width: 70px;
 `;
 
-export const ChevronLeftIconStyled = styled(ChevronLeftIcon)`
-  margin-bottom: 2%;
-`;
+
 
 // styled LoginPage & SignUpPage OK//
 
@@ -66,6 +64,7 @@ margin-top:10px;
 
 export const ChevronLeftIconStyled = styled(ChevronLeftIcon)`
 margin:0;
+margin-bottom: 2%;
 `
 // styled ShoppingCart //
 export const Container = styled.div`
@@ -104,15 +103,8 @@ export const ImgLogo = styled.img`
     height: 50px;
   }
 `;
-// styled RestaurantPage //
-
-
-export const Restaurant = styled.div`
-  height: 834px;
-`;
 
 export const RestaurantDetails = styled.div`  
-
   height: 280px;
   display: flex;
   flex-direction: column;
@@ -122,17 +114,15 @@ export const RestaurantDetails = styled.div`
   margin:0;
   /* border: 1px solid black; */
   box-sizing: border-box;
-
-`;
-
   
 `
+
 
 export const title = styled.div`
   height: 44px;
   margin: 20px 92px 0 54px;
   padding: 13px 45.5px 12px;
-`;
+`
 
 export const image = styled.div`
   width: 328px;
@@ -142,7 +132,7 @@ export const image = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-`;
+`
 export const RestaurantTitle = styled.div`
   width: 328px;
   height: 18px;
@@ -155,8 +145,8 @@ export const RestaurantTitle = styled.div`
   line-height: normal;
   letter-spacing: -0.39px;
   color: #e86e5a;
-`;
-export const Burger = styled.div`
+`
+export const Burger  = styled.div`
   width: 104px;
   height: 18px;
   margin: 8px 8px 8px 16px;
@@ -168,13 +158,12 @@ export const Burger = styled.div`
   line-height: normal;
   letter-spacing: -0.39px;
   color: #b8b8b8;
-`;
-
-
+`
 export const Areatempo  = styled.div`
 display:flex;
 flex-direction:row;
-`;
+`
+
 
 export const TempoDeEntrega  = styled.p`
   width: 104px;
@@ -188,12 +177,10 @@ export const TempoDeEntrega  = styled.p`
   line-height: normal;
   letter-spacing: -0.39px;
   color: #b8b8b8;
-`;
+`
 
-export const Frete = styled.div`
 
 export const Frete  = styled.p`
-
   width: 104px;
   height: 18px;
   margin: 8px 128px 10px 8px;
@@ -205,9 +192,10 @@ export const Frete  = styled.p`
   line-height: normal;
   letter-spacing: -0.39px;
   color: #b8b8b8;
-`;
+`
 
-export const Endereco = styled.div`
+
+export const Endereco  = styled.div`
   width: 328px;
   height: 18px;
   margin: 10px 16px 16px;
@@ -219,7 +207,7 @@ export const Endereco = styled.div`
   line-height: normal;
   letter-spacing: -0.39px;
   color: #b8b8b8;
-`;
+`
 
 export const Principais = styled.p`
   width: 328px;
@@ -234,28 +222,8 @@ export const Principais = styled.p`
   letter-spacing: -0.39px;
   color: var(--black);
 
-`;
+`
 
-export const Path = styled.div`
-  width: 328px;
-  height: 1px;
-  margin: 0 0 6px;
-  border: solid 1px var(--black);
-`;
-
-export const Rectangle = styled.div`
-  border: solid 1px;
-  border-color:black;
-`;
-export const ItemCard = styled.div`
-  width: 360px;
-  height: 120px;
-  margin: 8px 0 0;
-  padding: 0 16px;
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-`;
 
 export const Rectangle = styled.div` 
   width: 210px;
@@ -264,20 +232,12 @@ export const Rectangle = styled.div`
   padding: 18px 0 0 113px;
   border-radius: 8px;
   border: solid 1px #b8b8b8;
-`;
-
-export const MaoSantaBurguer = styled.div`
-  width: 97px;
-  height: 112.6px;
-  object-fit: contain;
-`;
-
-export const NomeDoItem = styled.div`
-
   display:flex;
   justify-content: space-between;
   
-`;
+  
+  
+`
 
 
 export const ImgBurguer = styled.img` 
@@ -310,13 +270,9 @@ export const NomeDoItem = styled.p`
   line-height: normal;
   letter-spacing: -0.39px;
   color: #e86e5a;
-
-`;
-export const ItensDoLanche = styled.div`
-`;
+`
 
 export const ItensDoLanche = styled.p` 
-
   width: 198px;
   height: 30px;
   margin: 6px 17px 6px 0;
@@ -328,10 +284,9 @@ export const ItensDoLanche = styled.p`
   line-height: normal;
   letter-spacing: -0.34px;
   color: #b8b8b8;
-`;
+`
 
 export const Preco = styled.p` 
-
   width: 108px;
   height: 19px;
   margin: 6px 17px 15px 0;
@@ -343,20 +298,7 @@ export const Preco = styled.p`
   line-height: normal;
   letter-spacing: -0.39px;
   color: var(--black);
-`;
-
-export const RectangleAdd = styled.div`
-  width: 90px;
-  height: 31px;
-  margin: 9px 0 0 17px;
-  padding: 8px 20.5px 9px 21.5px;
-  border-radius: 8px;
-  border: solid 1px var(--black);
-`;
-
-export const Adicionar = styled.div`
-  width: 48px;
-  height: 14px;
+`
 
 export const ButtonAdd = styled.span` 
   width: 40px;
@@ -370,7 +312,7 @@ export const ButtonAdd = styled.span`
   cursor:pointer;
   border-radius: 8px;
   border: solid 1px 
-`;
+`
 
 export const Adicionar = styled.div` 
  width: 48px;
@@ -384,7 +326,7 @@ line-height: normal;
 letter-spacing: -0.29px;
 text-align: center;
 color: red;
-`;
+`
 
 export const ButtonAddR = styled.span` 
   width: 40px;
@@ -398,7 +340,7 @@ export const ButtonAddR = styled.span`
   cursor:pointer;
   border-radius: 8px;
   border: solid 1px 
-`;
+`
 
 export const Remover = styled.div` 
 width: 48px;
@@ -412,7 +354,7 @@ line-height: normal;
 letter-spacing: -0.29px;
 text-align: center;
 color: black
-`;
+`
 
 export const Acompanhamentos  = styled.div`
   width: 328px;
@@ -426,10 +368,7 @@ export const Acompanhamentos  = styled.div`
   line-height: normal;
   letter-spacing: -0.39px;
   color: var(--black);
-
-`;
-
-
+`
 
 // styled RestaurantPage //
 
