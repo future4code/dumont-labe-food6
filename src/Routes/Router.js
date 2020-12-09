@@ -8,7 +8,7 @@ import FeedPage from "../Screens/Home/FeedPage";
 import SignUp from "../Screens/EnterSection/SignUpPage"
 import ShoppingCart from "../Screens/EnterSection/ShoppingCart"
 
-import Restaurant from "../Screens/Restaurants/Restaurant";
+import Restaurant from "../Screens/Restaurants/RestaurantPage";
 
 import AdressPage from "../Screens/EnterSection/AdressPage";
 import ProfilePage from "../Screens/ProfileUser/ProfilePage"
