@@ -4,7 +4,7 @@ import { useRequestData } from '../../Hooks/UseRequestData'
 import { BaseUrl } from '../../Constants/BaseUrl'
 
 
-function HistoryCard(props) {
+function HistoryCard() {
     
    // Função para pegar o histórico de pedidos
    const getOrdersHistory = useRequestData(`${BaseUrl}/orders/history`,  {

@@ -9,7 +9,7 @@ import Header from '../../Components/Header/Header'
 
 
 function SignUpEditPage() {
-    const { form, onChange } = useForm({
+    const { form, onChange, restState } = useForm({
     name: "",
     email: "",
     cpf: ""
@@ -29,6 +29,7 @@ function SignUpEditPage() {
   const handleSubmit = (event) => {
     event.preventDefault();
     updateProfile(form, history)
+    restState()
   }
 
 

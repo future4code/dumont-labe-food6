@@ -1,15 +1,15 @@
 import React from 'react'
 import axios from 'axios'
 import {BaseUrl} from '../Constants/BaseUrl'
-import { goToBuy, goToAdress } from '../Routes/Cordinator'
+import { goToBuy, goToAdress, goToProfilePage } from '../Routes/Cordinator'
 
 
 // Função para logar
 export const login = (body, history) => {
   axios.post(`${BaseUrl}/login`, body).then(response => {
       localStorage.setItem('token', response.data.token)
-      alert('Logado com sucesso!')
       console.log(response)
+      alert(`Olá ${response.data.user.name}! Estou te redirecionando para o feed`)
       goToBuy(history)
   }).catch(error => {
       console.log(error.message)
@@ -17,7 +17,8 @@ export const login = (body, history) => {
   })
 }
 
-// Função de cadastro(nome, e-mail, cpf e senha) e cria login(e-mail e senha)
+
+// Função de cadastro(nome, e-mail, cpf e senha) e cria login(mesmo e-mail e mesma senha)
 export const signUp = (body, history) => {
   axios.post(`${BaseUrl}/signup`, body).then(response => {
       localStorage.setItem('token', response.data.token)
@@ -26,6 +27,7 @@ export const signUp = (body, history) => {
       console.log(error.message)
   })
 }
+
 
 // Função para cadastrar o endereço do usuário
 export const address = (body, history) => {
@@ -45,6 +47,7 @@ export const address = (body, history) => {
   })
 }
 
+
 // Função para atualizar o endereço do usuário
 export const editAddress = (body, history) => {
   const axiosConfig = {
@@ -56,11 +59,13 @@ export const editAddress = (body, history) => {
   axios.put(`${BaseUrl}/address`, body, axiosConfig).then(response => {
       localStorage.setItem('token', response.data.token)
       alert('Editado com sucesso!')
+      goToProfilePage(history)
   }).catch(error => {
       console.log(error.message)
       alert('Falha ao editar endereço :( !')
   })
 }
+
 
 // Função para atualizar cadastro(nome, e-mail e cpf) do usuário
 export const updateProfile = (body, history) => {
@@ -72,6 +77,8 @@ export const updateProfile = (body, history) => {
   axios.put(`${BaseUrl}/profile`, body, axiosConfig).then(response => {
       localStorage.setItem('token', response.data.token)
       alert('Editado com sucesso!')
+      console.log(response)
+      goToProfilePage(history)
       // console.log(response)
   }).catch(error => {
       console.log(error.message)

@@ -11,19 +11,19 @@ import { goToSignUpEdit, goToAddressEdit } from '../../Routes/Cordinator'
 
 
 
-
 function ProfilePage() {
   
   // useProtectPage()
   const history = useHistory()
 
-  // Função que pega os dados do usuário
+  // // Função que pega os dados do usuário
   const getProfile = useRequestData(`${BaseUrl}/profile`, undefined)
 
-  // console.log(getProfile)
-  
+  console.log(getProfile)
 
-  return getProfile ? (
+
+
+  return  getProfile ? (
     <S.Container>
          <Header title={'Meu Perfil'}/>
 
@@ -43,16 +43,11 @@ function ProfilePage() {
         <S.HistoryUserContainer>
             <p>Histório de pedidos</p>
         </S.HistoryUserContainer>
-
-        {/* {getOrdersHistory && getOrdersHistory.posts && getOrdersHistory.posts.map((item) => {
-            return ( */}
-                <HistoryCard/>
-            {/* )
-        })} */}
+        
+        <HistoryCard/>
         <Footer/>
     </S.Container>
-  ) : (
-  <div>Carregando ...</div>)
+  ) : (<div>Carregando ...</div>)
 }
 export default ProfilePage;
 
