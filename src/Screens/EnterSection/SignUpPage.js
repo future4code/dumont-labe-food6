@@ -58,7 +58,7 @@ function SignUpPage() {
        <S.P><b>Cadastrar</b></S.P>
         
       <S.FormInputsSignUp onSubmit={handleSubmit}>
-  
+
         <TextField 
           value={form.name} 
           onChange={handleInputChange}

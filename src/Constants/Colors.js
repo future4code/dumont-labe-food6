@@ -5,6 +5,8 @@ export const primaryColor = '#E86E5A'
 
 
 // cores personalizadas
-// export const mainGray = 'gray'
+export const mainGray = 'gray'
+
+export const mainColor = '#C7777A'
 
 // export const mainDarkGray = '#2e3035'

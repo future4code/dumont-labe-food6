@@ -1,25 +1,25 @@
-//  import { useState, useEffect } from "react";
-//  import axios from "axios";
+ import { useState, useEffect } from "react";
+ import axios from "axios";
 
-//  export function useRequestData(url, initialState) {
-//    const [data, setData] = useState(initialState);
+ export function useRequestData(url, initialState) {
+   const [data, setData] = useState(initialState);
 
-//    useEffect(() => {
-//      const token = localStorage.getItem("token");
+   useEffect(() => {
+     const token = localStorage.getItem("token");
 
-//      axios
-//        .get(url, {
-//          headers: {
-//            Authorization: token,
-//          },
-//        })
-//        .then((response) => {
-//          setData(response.data);
-//        })
-//        .catch((err) => {
-//          console.log(err.message);
-//        });
-//    }, [url]);
+     axios
+       .get(url, {
+         headers: {
+           Authorization: token,
+         },
+       })
+       .then((response) => {
+         setData(response.data);
+       })
+       .catch((err) => {
+         console.log(err.message);
+       });
+   }, [url]);
 
-//    return data;
-//  }
+   return data;
+ }
