@@ -7,9 +7,10 @@ import * as S from '../ComponentsStyled';
 function Footer() {
   return (
 <S.Footer>
-<LocalGroceryStoreIcon/>
-<PersonIcon />
-<HomeIcon/>
+<HomeIcon fontSize="large"/>
+<LocalGroceryStoreIcon fontSize="large"/>
+<PersonIcon fontSize="large"/>
+
 </S.Footer>
 
   )
