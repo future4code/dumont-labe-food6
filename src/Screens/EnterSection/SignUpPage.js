@@ -10,11 +10,12 @@ import VisibilityIcon from '@material-ui/icons/Visibility'
 import Header from '../../Components/Header/Header'
 import LogoTitle from '../../Assets/logotitle.svg'
 import { goToLoginPage } from '../../Routes/Cordinator'
+import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 
 {/* ------ESTILIZAÇÃO OK -------     */}
 
 
-function SignUpPage() {
+function SignUpPage(props) {
   const [showPassword, setShowPassword] = React.useState(false)
 
   const {form, onChange} = useForm({
@@ -51,9 +52,11 @@ function SignUpPage() {
 
   return (
     <S.Container>
-         <Header/>
+         <Header  />
+         <ChevronLeftIcon onClick={()=>goToLoginPage(history)}/>
          <S.Logo>
         <S.TitleLogoLogin src={LogoTitle}/>
+       
         </S.Logo>
        <S.P><b>Cadastrar</b></S.P>
         
