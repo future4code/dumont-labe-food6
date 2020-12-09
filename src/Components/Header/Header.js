@@ -20,8 +20,16 @@ function Header(props) {
         <BatteryFullIcon style={{ fontSize: 16 }} />
             </S.HeaderEnd>
             <p>{props.title}</p>
+            <p>{props.button}</p>
         </S.HeaderContainer>
     )
 }
 
 export default Header;
+// <ButtonUsuario>
+// {props.currentScreen ?
+// <UsuarioImg src={addusuario} onClick={props.goCard} alt='usuario' /> 
+// :
+// <UsuarioImg src={trocausuario} onClick={props.goCard} alt='usuario' /> 
+// }
+// </ButtonUsuario>
