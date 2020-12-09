@@ -521,7 +521,7 @@ export const TextCopy = styled.p`
   width: 87px;
   white-space: nowrap;
   height: 18px;
-  margin: 0 80px;
+  margin: 0 0px;
   font-family: Roboto;
   font-size: 16px;
   font-weight: normal;
@@ -550,7 +550,6 @@ export const TextCopy3 = styled.p`
 
 export const DivText = styled.div`
   display: flex;
-// não consegui deixar os titulos alinhados.
 `;
 
 export const DivTextDeliveryFee = styled.p`
