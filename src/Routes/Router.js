@@ -5,13 +5,12 @@ import HomePage from "../Screens/EnterSection/HomePage";
 import LoginPage from "../Screens/EnterSection/LoginPage";
 import Error from "../Screens/Error/Error";
 import FeedPage from "../Screens/Home/FeedPage";
-import SignUp from "../Screens/EnterSection/SignUpPage"
-import ShoppingCart from "../Screens/EnterSection/ShoppingCart"
-
+import SignUp from "../Screens/EnterSection/SignUpPage";
+import ShoppingCart from "../Screens/EnterSection/ShoppingCart";
 import Restaurant from "../Screens/Restaurants/Restaurant";
-
 import AdressPage from "../Screens/EnterSection/AdressPage";
-
+import SearchPlaceHolderPage from "../Screens/Home/SearchPlaceHolderPage";
+import SearchResultsPage from "../Screens/Home/SearchResultsPage";
 
 export default function Router() {
   return (
@@ -32,8 +31,14 @@ export default function Router() {
         <Route exact path="/pagina-principal">
           <FeedPage />
         </Route>
+        <Route exact path="/buscar">
+          <SearchPlaceHolderPage />
+        </Route>
+        <Route exact path="/resultados">
+          <SearchResultsPage />
+        </Route>
         <Route exact path="/carrinho">
-        <ShoppingCart />
+          <ShoppingCart />
         </Route>
         <Route exact path="/restaurantes">
           <Restaurant />
