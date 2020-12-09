@@ -60,7 +60,7 @@ function AdressPage() {
           label='Número'
           placeholder='email@email.com'
           name='number'
-          type='number'
+          type='text'
           required
         />
         <br />
@@ -72,7 +72,6 @@ function AdressPage() {
           placeholder='Apto./Bloco'
           name='complement'
           type='text'
-          required
         />
         <br/>
         <TextField 

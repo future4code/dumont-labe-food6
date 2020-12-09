@@ -1,5 +1,5 @@
 export const goToBuy =(history)=>{
-    history.push('/comprar')
+    history.push('/pagina-principal')
 }
 export const goToLoginPage =(history)=>{
     history.push('/login')

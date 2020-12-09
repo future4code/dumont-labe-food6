@@ -2,7 +2,7 @@ import React from 'react';
 import * as S from '../ScreenStyled'
 import { useHistory } from 'react-router-dom'
 import { useForm } from '../../Hooks/UseForm'
-import { editProfile } from '../../Services/User'
+import { updateProfile } from '../../Services/User'
 import { TextField, Button } from '@material-ui/core'
 import Header from '../../Components/Header/Header'
 
@@ -28,7 +28,7 @@ function SignUpEditPage() {
   
   const handleSubmit = (event) => {
     event.preventDefault();
-    editProfile(form, history)
+    updateProfile(form, history)
   }
 
 
