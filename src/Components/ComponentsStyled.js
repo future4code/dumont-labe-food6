@@ -3,16 +3,16 @@ import ChevronLeftIcon from '@material-ui/icons/ChevronLeft'
 import { mainGray, mainColor } from '../Constants/Colors';
 
 export const Footer = styled.div`
-  display:flex;
-  justify-content:space-between;
-  width:360px;
-  height:49px;
-  align-items:center;
-  padding:5px;
+  display: flex;
+  justify-content: space-around;
+  width: 360px;
+  height: 49px;
+  align-items: center;
+  padding: 5px;
   box-sizing: border-box;
-  border: 1px solid black;
+  border-top: 1px solid black;
   bottom: 0;
-  position: fixed
+  position: fixed;
    `;
 
 export const HeaderContainer = styled.div`

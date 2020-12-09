@@ -67,8 +67,67 @@ margin:0;
 margin-bottom: 2%;
 `
 // styled ShoppingCart //
+export const DeliveryAddress = styled.div`
+  background-color: #eeeeee;
+  padding: 5px 10px;
+    p{
+      line-height: 0.3;
+    }
+    p:nth-child(1){
+      font-size: 14px;
+      color: #b8b8b8;
+    }
+    p:nth-child(2){
+      font-size: 15px;
+    }
+`;
+
+export const RestaurantAddress = styled.div`
+  padding: 0 10px;
+  p{
+    line-height: 0.5;
+    font-size: 14px;
+  }
+  p:nth-child(1){
+    color: #e86e5a;
+    }
+  p:nth-child(n+2){
+    font-size: 14px;
+    color: #b8b8b8;
+  }
+  `;
+
+export const Payment = styled.div`
+  padding: 0 10px;
+  font-size: 15px;
+  p{
+    line-height: 0;
+  }
+  p:nth-child(1){
+    display: flex;
+    justify-content: flex-end;
+  }
+  `;
+
+export const Subtotal = styled.div`
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+  p:nth-child(2){
+    color: #e86e5a;
+  }
+  `;
+
+export const ConfirmButton = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 330px;
+  margin: 0 auto;
+  margin-top: 10px;
+ `
+
 export const Container = styled.div`
-  height:640px;
+ height:640px;
  width:360px;
  position: fixed;
  top: 50%;
