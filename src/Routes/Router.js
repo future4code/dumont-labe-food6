@@ -8,12 +8,13 @@ import FeedPage from "../Screens/Home/FeedPage";
 import SignUp from "../Screens/EnterSection/SignUpPage"
 import ShoppingCart from "../Screens/EnterSection/ShoppingCart"
 
-import Restaurant from "../Screens/Restaurants/Restaurant";
+import Restaurant from "../Screens/Restaurants/RestaurantPage";
 
 import AdressPage from "../Screens/EnterSection/AdressPage";
 import ProfilePage from "../Screens/ProfileUser/ProfilePage"
 import AddressEditPage from "../Screens/ProfileUser/AddressEditPage"
 import SignUpEditPage from "../Screens/ProfileUser/SignUpEditPage"
+import Confirmation from "../Screens/Restaurants/ConfirmationPage";
 
 
 export default function Router() {
@@ -49,6 +50,9 @@ export default function Router() {
         </Route>
         <Route exact path="/restaurantes">
           <Restaurant />
+        </Route>
+        <Route exact path="/confirmacao">
+          <Confirmation/>
         </Route>
         <Route>
           <Error />
