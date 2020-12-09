@@ -78,3 +78,9 @@ export const Price = styled.p`
   font-weight: bolder;
   font-size: ${props => `${props.fontSize}px`};
 `
+
+export const noOrdersMessage = styled.div`
+  color: ${mainColor};
+  margin: 20% 10%;
+  font-weight: bolder;
+`

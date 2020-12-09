@@ -9,6 +9,7 @@ export const login = (body, history) => {
   axios.post(`${BaseUrl}/login`, body).then(response => {
       localStorage.setItem('token', response.data.token)
       alert('Logado com sucesso!')
+      console.log(response)
       goToBuy(history)
   }).catch(error => {
       console.log(error.message)
@@ -55,7 +56,6 @@ export const editAddress = (body, history) => {
   axios.put(`${BaseUrl}/address`, body, axiosConfig).then(response => {
       localStorage.setItem('token', response.data.token)
       alert('Editado com sucesso!')
-      console.log(response)
   }).catch(error => {
       console.log(error.message)
       alert('Falha ao editar endereço :( !')
@@ -72,7 +72,7 @@ export const updateProfile = (body, history) => {
   axios.put(`${BaseUrl}/profile`, body, axiosConfig).then(response => {
       localStorage.setItem('token', response.data.token)
       alert('Editado com sucesso!')
-      goToBuy(history)
+      // console.log(response)
   }).catch(error => {
       console.log(error.message)
       alert('Falha ao editar cadastro :( !')

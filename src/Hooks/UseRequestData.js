@@ -10,7 +10,7 @@
      axios
        .get(url, {
          headers: {
-           Authorization: token,
+           auth: token,
          },
        })
        .then((response) => {
