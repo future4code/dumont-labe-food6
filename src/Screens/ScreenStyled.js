@@ -2,6 +2,7 @@
 import styled from "styled-components";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 
+
 // styled LoginPage //
 
 export const FormLogin = styled.form``;
@@ -22,6 +23,54 @@ export const TitleLogo = styled.img`
 export const ChevronLeftIconStyled = styled(ChevronLeftIcon)`
   margin-bottom: 2%;
 `;
+
+// styled LoginPage & SignUpPage OK//
+
+export const FormInputsLogin = styled.form`
+  display: flex;
+  flex-direction: column;
+  height: 20vh;
+  width: 25vw;
+  justify-content: space-around;
+  margin-top: 20%;
+  margin-left: 3%;
+  margin-bottom: 5%;
+`
+export const FormInputsSignUp = styled.form`
+  display: flex;
+  flex-direction: column;
+  height: 20vh;
+  width: 25vw;
+  justify-content: space-around;
+  margin-top: 50%;
+  margin-left: 3%;
+  margin-bottom: 5%;
+`
+export const TitleLogoLogin = styled.img`
+ width: 150px;
+ `
+export const P=styled.p`
+text-align:center;
+`
+export const Logo = styled.div`
+display:flex;
+align-items:center;
+justify-content:center;
+ `
+export const AreaButton = styled.div`
+display:flex;
+align-items:center;
+justify-content:center;
+flex-direction:column;
+margin-top:10px;
+ `
+
+
+export const ChevronLeftIconStyled = styled(ChevronLeftIcon)`
+margin:0;
+`
+
+
 
 // styled ShoppingCart //
 export const Container = styled.div`
@@ -60,17 +109,27 @@ export const ImgLogo = styled.img`
 `;
 // styled RestaurantPage //
 
+
 export const Restaurant = styled.div`
   height: 834px;
+export const RestaurantDetails = styled.div`  
+  height: 350px;
+
   display: flex;
   flex-direction: column;
-  text-align: center;
-  width: 85vw;
+  text-align: left;
+  width: 360px;
   max-width: 465px;
-  margin: 0 auto;
+  margin:0;
   border: 1px solid black;
   box-sizing: border-box;
+
 `;
+
+  
+`
+
+
 
 export const title = styled.div`
   height: 44px;
@@ -129,6 +188,9 @@ export const TempoDeEntrega = styled.div`
 `;
 
 export const Frete = styled.div`
+
+export const Frete  = styled.p`
+
   width: 104px;
   height: 18px;
   margin: 8px 128px 10px 8px;
@@ -168,15 +230,38 @@ export const Principais = styled.div`
   line-height: normal;
   letter-spacing: -0.39px;
   color: var(--black);
+
 `;
+
+
+`
+
 export const Path = styled.div`
   width: 328px;
   height: 1px;
   margin: 0 0 6px;
+
   border: solid 1px var(--black);
 `;
 
 export const Rectangle = styled.div`
+
+  border: solid 1px;
+  border-color:black;
+`
+export const ItemCard = styled.div`
+  width: 360px;
+  height: 120px;
+  margin: 8px 0 0;
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+`
+
+
+export const Rectangle = styled.div` 
+
   width: 328px;
   height: 112px;
   margin: 7px 0 0;
@@ -203,8 +288,14 @@ export const NomeDoItem = styled.div`
   line-height: normal;
   letter-spacing: -0.39px;
   color: #e86e5a;
+
 `;
 export const ItensDoLanche = styled.div`
+
+`
+
+export const ItensDoLanche = styled.div` 
+
   width: 198px;
   height: 30px;
   margin: 6px 17px 6px 0;
@@ -253,7 +344,36 @@ export const Adicionar = styled.div`
   letter-spacing: -0.29px;
   text-align: center;
   color: var(--black);
+
 `;
+
+`
+export const Remover = styled.div` 
+  width: 43px;
+  height: 14px;
+  font-family: Roboto;
+  font-size: 12px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.29px;
+  text-align: center;
+  color: #e02020;
+`
+
+export const Acompanhamentos  = styled.div`
+  width: 328px;
+  height: 18px;
+  margin: 16px 16px 8px;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.39px;
+  color: var(--black);
 
 // styled RestaurantPage //
 
@@ -284,6 +404,7 @@ export const TitleAdress = styled.p`
   margin: 55% 30% 5%;
 `;
 // styled AdressPage //
+
 
 // styled FeedPage //
 
@@ -473,4 +594,33 @@ position: relative;
 
 `;
 
+
 // Final styled Search Place Holder Page //
+
+
+
+// styled AdressEditPage //
+export const AdressEditContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 96%;
+  max-width: 465px;
+  margin: 0 auto;
+`
+
+export const FormEditAdress= styled.form`
+  display: flex;
+  flex-direction: column;
+  height: 20vh;
+  width: 90vw;
+  justify-content: space-around;
+  margin-top: 50%;
+  margin-left: 3%;
+  margin-bottom: 5%;
+`
+// styled AdressEditPage //
+
+// styled AdressPage //
+
+

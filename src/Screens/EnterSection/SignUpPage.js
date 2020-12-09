@@ -11,6 +11,7 @@ import Header from '../../Components/Header/Header'
 import LogoTitle from '../../Assets/logotitle.svg'
 import { goToLoginPage } from '../../Routes/Cordinator'
 
+{/* ------ESTILIZAÇÃO OK -------     */}
 
 
 function SignUpPage() {
@@ -50,11 +51,14 @@ function SignUpPage() {
 
   return (
     <S.Container>
-        <Header/>
-        <S.ChevronLeftIconStyled onClick={() => goToLoginPage(history)}/>
-        <S.TitleLogo src={LogoTitle}/>
-      <S.FormAdress onSubmit={handleSubmit}>
-      <Header title={"Cadastrar"}/>
+         <Header/>
+         <S.Logo>
+        <S.TitleLogoLogin src={LogoTitle}/>
+        </S.Logo>
+       <S.P><b>Cadastrar</b></S.P>
+        
+      <S.FormInputsSignUp onSubmit={handleSubmit}>
+  
         <TextField 
           value={form.name} 
           onChange={handleInputChange}
@@ -127,7 +131,7 @@ function SignUpPage() {
         >
           CRIAR
         </Button>
-      </S.FormAdress>
+      </S.FormInputsSignUp>
     </S.Container>
   );
 }

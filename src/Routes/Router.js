@@ -11,6 +11,10 @@ import Restaurant from "../Screens/Restaurants/Restaurant";
 import AdressPage from "../Screens/EnterSection/AdressPage";
 import SearchPlaceHolderPage from "../Screens/Home/SearchPlaceHolderPage";
 import SearchResultsPage from "../Screens/Home/SearchResultsPage";
+import ProfilePage from "../Screens/ProfileUser/ProfilePage"
+import AddressEditPage from "../Screens/ProfileUser/AddressEditPage"
+import SignUpEditPage from "../Screens/ProfileUser/SignUpEditPage"
+
 
 export default function Router() {
   return (
@@ -36,7 +40,15 @@ export default function Router() {
         </Route>
         <Route exact path="/resultados">
           <SearchResultsPage />
+        <Route exact path="/meu-perfil">
+          <ProfilePage />
         </Route>
+        <Route exact path="/editar-endereco">
+          <AddressEditPage />
+        </Route>
+        <Route exact path="/editar-cadastro">
+          <SignUpEditPage />
+          </Route>
         <Route exact path="/carrinho">
           <ShoppingCart />
         </Route>
