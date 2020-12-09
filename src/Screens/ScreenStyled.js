@@ -1,6 +1,7 @@
 // import React from 'react';
 import styled from  'styled-components'
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft'
+import EditIcon from '@material-ui/icons/Edit'
 
 
 // styled LoginPage & SignUpPage OK//
@@ -9,7 +10,7 @@ export const FormInputsLogin = styled.form`
   display: flex;
   flex-direction: column;
   height: 20vh;
-  width: 25vw;
+  width: 335px;
   justify-content: space-around;
   margin-top: 20%;
   margin-left: 3%;
@@ -19,7 +20,7 @@ export const FormInputsSignUp = styled.form`
   display: flex;
   flex-direction: column;
   height: 20vh;
-  width: 25vw;
+  width: 335px;
   justify-content: space-around;
   margin-top: 50%;
   margin-left: 3%;
@@ -437,22 +438,22 @@ export const AdicionarAoCarrinho= styled.button`
 `
 
 // styled AdressPage //
-export const AdressContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  width: 96%;
-  max-width: 465px;
-  margin: 0 auto;
-`
+// export const AdressContainer = styled.div`
+//   display: flex;
+//   flex-direction: column;
+//   text-align: center;
+//   width: 96%;
+//   max-width: 465px;
+//   margin: 0 auto;
+// `
 
 export const FormAdress= styled.form`
   display: flex;
   flex-direction: column;
   height: 20vh;
-  width: 90vw;
+  width: 335px;
   justify-content: space-around;
-  margin-top: 30%;
+  margin-top: 32%;
   margin-left: 3%;
   margin-bottom: 5%;
 `
@@ -462,7 +463,7 @@ export const TitleAdress = styled.p`
   font-size: 16px;
   margin: 55% 30% 5%;
 `
-// styled AdressPage //
+
 
 
 // styled FeedPage //
@@ -491,13 +492,75 @@ export const FormEditAdress= styled.form`
   display: flex;
   flex-direction: column;
   height: 20vh;
-  width: 90vw;
+  width: 335px;
   justify-content: space-around;
   margin-top: 50%;
   margin-left: 3%;
   margin-bottom: 5%;
 `
-// styled AdressEditPage //
+
+
+// styled SignUpEditPage //
+export const FormEditSignUp= styled.form`
+  display: flex;
+  flex-direction: column;
+  height: 20vh;
+  width: 335px;
+  justify-content: space-around;
+  margin-top: 32%;
+  margin-left: 3%;
+  margin-bottom: 5%;
+`
+
+
+// styled ProfilePage //
+export const ProfileContainer = styled.div`
+  margin-top: 12%;
+  margin-left: 4%;
+  border-bottom: 1px solid gray;
+  border-top: 1px solid gray;
+  &:active{
+    background-color: #EEEEEE;
+  }
+`
+
+export const InfoUserContainer = styled.div`
+  margin-top: 12%;
+  margin-left: 4%;
+  border-bottom: 1px solid gray;
+  border-top: 1px solid gray;
+  word-break: break-all;
+  &:active{
+    background-color: #EEEEEE;
+  }
+`
+
+export const EditIconStyled= styled(EditIcon)`
+  float: right;
+  margin-top: 4%;
+  margin-right: 5%;
+  margin-left: 15%;
+`
+
+export const AddressUserContainer = styled.div`
+  margin-top: 4%;
+  margin-left: 4%;
+  border-bottom: 1px solid gray;
+  &:active{
+    background-color: #EEEEEE;
+  }
+` 
+
+export const HistoryUserContainer = styled.div`
+  margin-top: 8%;
+  margin-left: 4%;
+  border-bottom: 1px solid gray;
+  &:active{
+    background-color: #EEEEEE;
+  }
+`
+
+
 
 // styled AdressPage //
 

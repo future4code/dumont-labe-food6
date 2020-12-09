@@ -37,10 +37,9 @@ function AdressEditPage() {
 
 
   return (
-    <S.AdressEditContainer>
+    <S.Container>
       <Header title={'Endereco'}/>
-        <S.ChevronLeftIconStyled onClick={() => goToSignUp(history)}/>
-      
+    
       <S.FormEditAdress onSubmit={handleSubmit}>
         <TextField 
           value={form.street} 
@@ -116,7 +115,7 @@ function AdressEditPage() {
           SALVAR
         </Button>
       </S.FormEditAdress>
-    </S.AdressEditContainer>
+    </S.Container>
   );
 }
 export default AdressEditPage;
