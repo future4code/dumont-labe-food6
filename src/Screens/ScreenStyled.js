@@ -10,7 +10,7 @@ export const FormInputsLogin = styled.form`
   display: flex;
   flex-direction: column;
   height: 20vh;
-  width: 25vw;
+  width: 335px;
   justify-content: space-around;
   margin-top: 20%;
   margin-left: 3%;
@@ -20,7 +20,7 @@ export const FormInputsSignUp = styled.form`
   display: flex;
   flex-direction: column;
   height: 20vh;
-  width: 25vw;
+  width: 335px;
   justify-content: space-around;
   margin-top: 50%;
   margin-left: 3%;
@@ -330,22 +330,22 @@ export const Acompanhamentos  = styled.div`
 // styled RestaurantPage //
 
 // styled AdressPage //
-export const AdressContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  width: 96%;
-  max-width: 465px;
-  margin: 0 auto;
-`
+// export const AdressContainer = styled.div`
+//   display: flex;
+//   flex-direction: column;
+//   text-align: center;
+//   width: 96%;
+//   max-width: 465px;
+//   margin: 0 auto;
+// `
 
 export const FormAdress= styled.form`
   display: flex;
   flex-direction: column;
   height: 20vh;
-  width: 90vw;
+  width: 335px;
   justify-content: space-around;
-  margin-top: 30%;
+  margin-top: 32%;
   margin-left: 3%;
   margin-bottom: 5%;
 `
@@ -384,7 +384,7 @@ export const FormEditAdress= styled.form`
   display: flex;
   flex-direction: column;
   height: 20vh;
-  width: 21vw;
+  width: 335px;
   justify-content: space-around;
   margin-top: 50%;
   margin-left: 3%;
@@ -397,7 +397,7 @@ export const FormEditSignUp= styled.form`
   display: flex;
   flex-direction: column;
   height: 20vh;
-  width: 21vw;
+  width: 335px;
   justify-content: space-around;
   margin-top: 32%;
   margin-left: 3%;
@@ -406,7 +406,7 @@ export const FormEditSignUp= styled.form`
 
 
 // styled ProfilePage //
-export const InfoUserContainer = styled.div`
+export const ProfileContainer = styled.div`
   margin-top: 12%;
   margin-left: 4%;
   border-bottom: 1px solid gray;
@@ -416,10 +416,22 @@ export const InfoUserContainer = styled.div`
   }
 `
 
-export const EditIconInfo = styled(EditIcon)`
+export const InfoUserContainer = styled.div`
+  margin-top: 12%;
+  margin-left: 4%;
+  border-bottom: 1px solid gray;
+  border-top: 1px solid gray;
+  word-break: break-all;
+  &:active{
+    background-color: #EEEEEE;
+  }
+`
+
+export const EditIconStyled= styled(EditIcon)`
   float: right;
   margin-top: 4%;
-  margin-right: 4%;
+  margin-right: 5%;
+  margin-left: 15%;
 `
 
 export const AddressUserContainer = styled.div`

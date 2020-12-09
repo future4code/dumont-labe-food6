@@ -37,9 +37,9 @@ function AdressPage() {
 
 
   return (
-    <S.AdressContainer>
+    <S.Container>
       <Header/>
-        <S.ChevronLeftIconStyled onClick={() => goToSignUp(history)}/>
+        {/* <S.ChevronLeftIconStyled onClick={() => goToSignUp(history)}/> */}
         <S.FormAdress onSubmit={handleSubmit}>
         <S.TitleAdress>Meu endereço</S.TitleAdress>
         <TextField 
@@ -116,7 +116,7 @@ function AdressPage() {
           SALVAR
         </Button>
       </S.FormAdress>
-    </S.AdressContainer>
+    </S.Container>
   );
 }
 export default AdressPage;

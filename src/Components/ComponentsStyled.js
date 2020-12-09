@@ -55,10 +55,8 @@ export const Divisao = styled.div`
 // Styled HistoryCard //
 export const HistoryContainer = styled.div`
   margin: 4% 5%;
-  overflow-y: scroll;
-  height: 200px;
-  display: grid;
-  row-gap: 1em;
+  overflow-y: auto;
+  max-height: 200px;
 `
 
 export const InfoHistory = styled.div`
@@ -66,6 +64,7 @@ export const InfoHistory = styled.div`
   border-radius: 10px;
   font-size: 12px;
   padding: 2% 4%;
+  margin-bottom: 5%;
   height: 124px;
 `
 
