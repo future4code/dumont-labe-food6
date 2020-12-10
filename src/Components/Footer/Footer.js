@@ -4,6 +4,7 @@ import PersonIcon from '@material-ui/icons/Person';
 import HomeIcon from '@material-ui/icons/Home';
 import * as S from '../ComponentsStyled';
 
+
 function Footer() {
   return (
 <S.Footer>

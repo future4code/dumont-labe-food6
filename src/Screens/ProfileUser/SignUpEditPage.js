@@ -3,6 +3,7 @@ import * as S from '../ScreenStyled'
 import { useHistory } from 'react-router-dom'
 import { useForm } from '../../Hooks/UseForm'
 import { updateProfile } from '../../Services/User'
+import { goToProfilePage } from '../../Routes/Cordinator'
 import { TextField, Button } from '@material-ui/core'
 import Header from '../../Components/Header/Header'
 
@@ -36,6 +37,8 @@ function SignUpEditPage() {
   return (
     <S.Container>
         <Header title={'Editar'}/>
+        <S.ChevronLeftIconStyled onClick={() => goToProfilePage(history)}/>
+        <S.LineHeader/>
         <S.FormEditSignUp onSubmit={handleSubmit}>
         <TextField 
           value={form.name} 

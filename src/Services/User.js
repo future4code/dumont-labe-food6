@@ -1,7 +1,7 @@
 import React from 'react'
 import axios from 'axios'
 import {BaseUrl} from '../Constants/BaseUrl'
-import { goToBuy, goToAdress, goToProfilePage } from '../Routes/Cordinator'
+import { goToBuy, goToAdress, goToProfilePage, logOut, goToLoginPage } from '../Routes/Cordinator'
 
 
 
@@ -86,8 +86,8 @@ export const updateProfile = (body, history) => {
   axios.put(`${BaseUrl}/profile`, body, axiosConfig).then(response => {
       localStorage.setItem('token', response.data.token)
       alert('Editado com sucesso!')
-      console.log(response)
-      goToProfilePage(history)
+      logOut(history)
+      goToLoginPage(history)
   }).catch(error => {
       console.log(error.message)
       alert('Falha ao editar cadastro :( !')

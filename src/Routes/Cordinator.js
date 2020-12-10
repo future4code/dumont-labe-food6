@@ -30,3 +30,8 @@ export const goToSignUpEdit =(history)=>{
 export const goToShoppingCart =(history)=>{
     history.push('/carrinho')
 }
+
+export const logOut = (history) => {
+    localStorage.removeItem('token')
+    history.push('/login')
+  }
