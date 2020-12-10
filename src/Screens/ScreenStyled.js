@@ -3,6 +3,7 @@
 import styled from "styled-components";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import EditIcon from '@material-ui/icons/Edit'
+import { CircularProgress } from '@material-ui/core';
 
 // // styled LoginPage //
 
@@ -35,12 +36,12 @@ export const FormInputsLogin = styled.form`
 export const FormInputsSignUp = styled.form`
   display: flex;
   flex-direction: column;
-  height: 20vh;
+  height: 20Vh;
   width: 335px;
   justify-content: space-around;
-  margin-top: 50%;
+  margin-top: 32%;
   margin-left: 3%;
-  margin-bottom: 5%;
+  margin-bottom: 2%;
 `
 export const TitleLogoLogin = styled.img`
  width: 150px;
@@ -63,9 +64,15 @@ margin-top:10px;
 
 
 export const ChevronLeftIconStyled = styled(ChevronLeftIcon)`
-margin:0;
-margin-bottom: 2%;
+  margin-top: 0; 
+  margin-left: 4%;
 `
+
+export const CircularProgressStyled = styled(CircularProgress)`
+   margin: 65% 45%;
+`
+
+
 // styled ShoppingCart //
 export const DeliveryAddress = styled.div`
   background-color: #eeeeee;
@@ -513,33 +520,13 @@ export const AdicionarAoCarrinho= styled.button`
 
 
 // styled AdressPage //
-
-export const AdressContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  width: 96%;
-  max-width: 465px;
-  margin: 0 auto;
-`;
-
-// export const AdressContainer = styled.div`
-//   display: flex;
-//   flex-direction: column;
-//   text-align: center;
-//   width: 96%;
-//   max-width: 465px;
-//   margin: 0 auto;
-// `
-
-
 export const FormAdress = styled.form`
   display: flex;
   flex-direction: column;
   height: 20vh;
   width: 335px;
   justify-content: space-around;
-  margin-top: 32%;
+  margin-top: 18%;
   margin-left: 3%;
   margin-bottom: 5%;
 `;
@@ -547,10 +534,14 @@ export const FormAdress = styled.form`
 export const TitleAdress = styled.p`
   font-family: Roboto, Helvetica, sans-serif;
   font-size: 16px;
-  margin: 55% 30% 5%;
-
+  margin: 60% 34% 6%;
 `;
-// styled AdressPage //
+
+export const LineHeader = styled.hr`
+  width: 97%;
+`
+
+
 
 // styled FeedPage //
 
@@ -781,25 +772,10 @@ export const FormEditSignUp= styled.form`
 
 
 // styled ProfilePage //
-export const ProfileContainer = styled.div`
-  margin-top: 12%;
-  margin-left: 4%;
-  border-bottom: 1px solid gray;
-  border-top: 1px solid gray;
-  &:active{
-    background-color: #EEEEEE;
-  }
-`
-
 export const InfoUserContainer = styled.div`
-  margin-top: 12%;
+  margin-top: 5%;
   margin-left: 4%;
-  border-bottom: 1px solid gray;
-  border-top: 1px solid gray;
   word-break: break-all;
-  &:active{
-    background-color: #EEEEEE;
-  }
 `
 
 export const EditIconStyled= styled(EditIcon)`
@@ -812,23 +788,16 @@ export const EditIconStyled= styled(EditIcon)`
 export const AddressUserContainer = styled.div`
   margin-top: 4%;
   margin-left: 4%;
-  border-bottom: 1px solid gray;
-  &:active{
-    background-color: #EEEEEE;
-  }
+  word-break: break-all;
 ` 
 
 export const HistoryUserContainer = styled.div`
   margin-top: 8%;
   margin-left: 4%;
-  border-bottom: 1px solid gray;
-  &:active{
-    background-color: #EEEEEE;
-  }
 `
 
 
 
-// styled AdressPage //
+
 
 

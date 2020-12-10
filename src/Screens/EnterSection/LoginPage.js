@@ -8,10 +8,10 @@ import { login } from '../../Services/User'
 import { TextField, Button } from '@material-ui/core'
 import VisibilityOffIcon from '@material-ui/icons/VisibilityOff'
 import VisibilityIcon from '@material-ui/icons/Visibility'
-import { goToHomePage, goToSignUp } from '../../Routes/Cordinator'
+import { goToSignUp } from '../../Routes/Cordinator'
 import LogoTitle from '../../Assets/logotitle.svg'
 import Header from '../../Components/Header/Header'
-import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
+
 
 
 {/* ------ESTILIZAÇÃO OK -------     */}
@@ -43,7 +43,6 @@ function LoginPage() {
     login(form, history)
   }
 
-  
 
 
   // Função para mostrar a senha ou não
@@ -60,7 +59,6 @@ function LoginPage() {
   return (
       <S.Container>
         <Header/>
-        <ChevronLeftIcon onClick={()=>goToHomePage(history)}/>
         <S.Logo>
         <S.TitleLogoLogin src={LogoTitle}/>
         </S.Logo>
@@ -91,7 +89,16 @@ function LoginPage() {
             type={showPassword ? 'text' : 'password'}
             InputProps={{
               endAdornment: (
-                showPassword ? <VisibilityIcon onClick={handleShowPassword}/> : <VisibilityOffIcon onClick={handleShowPassword}/>
+              showPassword ? (
+                <VisibilityIcon 
+                  onClick={handleShowPassword} 
+                  fontSize={'small'}
+                /> ) : (
+                <VisibilityOffIcon 
+                  onClick={handleShowPassword} 
+                  fontSize={'small'}
+                />
+                )
               ),
             }}
           />
