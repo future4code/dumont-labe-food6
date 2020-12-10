@@ -37,10 +37,13 @@ function LoginPage() {
 
   
   const handleSubmit = (event) => {
+    console.log('chamou a função')
     
     event.preventDefault();
     login(form, history)
   }
+
+  
 
 
   // Função para mostrar a senha ou não
@@ -92,9 +95,6 @@ function LoginPage() {
               ),
             }}
           />
-             </S.FormInputsLogin>
-
-          
           <S.AreaButton>
           <Button 
             variant='contained'
@@ -111,7 +111,7 @@ function LoginPage() {
             Clique aqui.
           </Button>
           </S.AreaButton>
-     
+          </S.FormInputsLogin>
       </S.Container>
   );
 }
