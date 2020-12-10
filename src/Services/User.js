@@ -4,18 +4,27 @@ import {BaseUrl} from '../Constants/BaseUrl'
 import { goToBuy, goToAdress, goToProfilePage } from '../Routes/Cordinator'
 
 
+
 // Função para logar
-export const login = (body, history) => {
-  axios.post(`${BaseUrl}/login`, body).then(response => {
-      localStorage.setItem('token', response.data.token)
-      console.log(response)
-      alert(`Olá ${response.data.user.name}! Estou te redirecionando para o feed`)
-      goToBuy(history)
-  }).catch(error => {
-      console.log(error.message)
-      alert('E-mail ou senha inválidos!')
-  })
+export const login = (body, history) =>{
+  axios.post(`${BaseUrl}/login`, body).then ((response) => {
+      localStorage.setItem('user', response.data.user)
+        
+      if(response.data.user.hasAddress){
+        localStorage.setItem("token", response.data.token);
+        alert(`Olá ${response.data.user.name}! Estou te redirecionando para o feed`)
+        goToBuy(history)
+  
+      } else {
+           localStorage.setItem("token", response.data.token);
+           goToAdress(history);
+        }
+    }).catch(error => {
+        alert('E-mail ou senha inválidos!')
+        console.log(error.message)
+      })
 }
+  
 
 
 // Função de cadastro(nome, e-mail, cpf e senha) e cria login(mesmo e-mail e mesma senha)

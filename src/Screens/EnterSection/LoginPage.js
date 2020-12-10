@@ -18,10 +18,11 @@ import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 
 function LoginPage() {
   const [showPassword, setShowPassword] = React.useState(false)
+  
 
   const { form, onChange } = useForm({
     email: "",
-    password: ""
+    password: "",
   })
   
   useProtectPage()
@@ -36,6 +37,7 @@ function LoginPage() {
 
   
   const handleSubmit = (event) => {
+    
     event.preventDefault();
     login(form, history)
   }
@@ -49,6 +51,7 @@ function LoginPage() {
       setShowPassword(true)
       }
     }
+
 
 
   return (
