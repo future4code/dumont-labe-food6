@@ -11,49 +11,43 @@ import { goToSignUpEdit, goToAddressEdit } from '../../Routes/Cordinator'
 
 
 
-
 function ProfilePage() {
-//   const [profile, setProfile] = React.useState([])
   
   // useProtectPage()
   const history = useHistory()
-  
 
-  // Função para pegar o histórico de pedidos
-//   const getOrdersHistory = useRequestData(`${BaseUrl}/orders/history`, undefined)
+  // // Função que pega os dados do usuário
+  const getProfile = useRequestData(`${BaseUrl}/profile`, undefined)
 
-//   console.log(getOrdersHistory)
+  console.log(getProfile)
 
-  return (
+
+
+  return  getProfile ? (
     <S.Container>
          <Header title={'Meu Perfil'}/>
 
         <S.InfoUserContainer>
         <S.EditIconStyled fontSize={'small'} onClick={() => goToSignUpEdit(history)}/>
-            <span>Maria</span>
-            
-            <p>e-mail@email.com</p>
-            <p>333.333.333-33</p>
+           <span>Nome: {getProfile.user.name}</span>
+            <p>E-mail: {getProfile.user.email}</p>
+            <p>CPF: {getProfile.user.cpf}</p>
         </S.InfoUserContainer>
 
         <S.AddressUserContainer>
-            <span>Endereço cadastrado</span>
+            <span>Endereço cadastrado:</span>
             <S.EditIconStyled fontSize={'small'} onClick={() => goToAddressEdit(history)}/>
-            <p>Rua Alessandra Vieira, 42 -Santa</p>
+            <p>{getProfile.user.address}</p>
         </S.AddressUserContainer>
 
         <S.HistoryUserContainer>
             <p>Histório de pedidos</p>
         </S.HistoryUserContainer>
-
-        {/* {getOrdersHistory && getOrdersHistory.posts && getOrdersHistory.posts.map((item) => {
-            return ( */}
-                <HistoryCard/>
-            {/* )
-        })} */}
+        
+        <HistoryCard/>
         <Footer/>
     </S.Container>
-  );
+  ) : (<div>Carregando ...</div>)
 }
 export default ProfilePage;
 

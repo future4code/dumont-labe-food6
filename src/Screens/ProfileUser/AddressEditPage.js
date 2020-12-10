@@ -2,16 +2,17 @@ import React from 'react'
 import * as S from '../ScreenStyled'
 import { useHistory } from 'react-router-dom';
 import { useForm } from '../../Hooks/UseForm'
-import { address } from '../../Services/User'
+import { editAddress } from '../../Services/User'
 // import { useProtectPage } from '../../Hooks/UseProtectPage'
 import { TextField, Button } from '@material-ui/core'
 import Header from '../../Components/Header/Header'
-import { goToSignUp } from '../../Routes/Cordinator'
+// import { goToSignUp, goToProfilePage } from '../../Routes/Cordinator'
+// import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 
 
 
 function AdressEditPage() {
-  const {form, onChange} = useForm({
+  const {form, onChange, restState} = useForm({
     street: "",
     number: "",
     neighbourhood: "",
@@ -32,14 +33,15 @@ function AdressEditPage() {
   const handleSubmit = (event) => {
     event.preventDefault()
     
-    address(form, history)
+    editAddress(form, history)
+    restState()
   }
 
 
   return (
     <S.Container>
-      <Header title={'Endereco'}/>
-    
+      <Header title={'Editar Endereço'}/>
+      {/* <ChevronLeftIcon onClick={() => goToProfilePage(history)}/>} */}
       <S.FormEditAdress onSubmit={handleSubmit}>
         <TextField 
           value={form.street} 

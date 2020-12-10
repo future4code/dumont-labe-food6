@@ -1,21 +1,33 @@
 import React from 'react'
 import axios from 'axios'
 import {BaseUrl} from '../Constants/BaseUrl'
-import { goToBuy, goToAdress } from '../Routes/Cordinator'
+import { goToBuy, goToAdress, goToProfilePage } from '../Routes/Cordinator'
 
 
 
-export const login = (body, history) => {
-  axios.post(`${BaseUrl}/login`, body).then(response => {
-      localStorage.setItem('token', response.data.token)
-      alert('Logado com sucesso!')
-      goToBuy(history)
-  }).catch(error => {
-      console.log(error.message)
-      alert('E-mail ou senha inválidos!')
-  })
+// Função para logar
+export const login = (body, history) =>{
+  axios.post(`${BaseUrl}/login`, body).then ((response) => {
+      localStorage.setItem('user', response.data.user)
+        
+      if(response.data.user.hasAddress){
+        localStorage.setItem("token", response.data.token);
+        alert(`Olá ${response.data.user.name}! Estou te redirecionando para o feed`)
+        goToBuy(history)
+  
+      } else {
+           localStorage.setItem("token", response.data.token);
+           goToAdress(history);
+        }
+    }).catch(error => {
+        alert('E-mail ou senha inválidos!')
+        console.log(error.message)
+      })
 }
+  
 
+
+// Função de cadastro(nome, e-mail, cpf e senha) e cria login(mesmo e-mail e mesma senha)
 export const signUp = (body, history) => {
   axios.post(`${BaseUrl}/signup`, body).then(response => {
       localStorage.setItem('token', response.data.token)
@@ -25,6 +37,8 @@ export const signUp = (body, history) => {
   })
 }
 
+
+// Função para cadastrar o endereço do usuário
 export const address = (body, history) => {
   const axiosConfig = {
     headers: {
@@ -43,6 +57,26 @@ export const address = (body, history) => {
 }
 
 
+// Função para atualizar o endereço do usuário
+export const editAddress = (body, history) => {
+  const axiosConfig = {
+    headers: {
+      auth: localStorage.getItem('token')
+    }
+  }
+
+  axios.put(`${BaseUrl}/address`, body, axiosConfig).then(response => {
+      localStorage.setItem('token', response.data.token)
+      alert('Editado com sucesso!')
+      goToProfilePage(history)
+  }).catch(error => {
+      console.log(error.message)
+      alert('Falha ao editar endereço :( !')
+  })
+}
+
+
+// Função para atualizar cadastro(nome, e-mail e cpf) do usuário
 export const updateProfile = (body, history) => {
   const axiosConfig = {
     headers: {
@@ -52,8 +86,11 @@ export const updateProfile = (body, history) => {
   axios.put(`${BaseUrl}/profile`, body, axiosConfig).then(response => {
       localStorage.setItem('token', response.data.token)
       alert('Editado com sucesso!')
-      goToBuy(history)
+      console.log(response)
+      goToProfilePage(history)
+      // console.log(response)
   }).catch(error => {
       console.log(error.message)
+      alert('Falha ao editar cadastro :( !')
   })
 }
