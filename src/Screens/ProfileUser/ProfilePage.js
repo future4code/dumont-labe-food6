@@ -4,7 +4,6 @@ import { useHistory } from 'react-router-dom'
 import Header from '../../Components/Header/Header'
 import HistoryCard from '../../Components/HistoryCard/HistoryCard'
 import { useRequestData } from '../../Hooks/UseRequestData'
-import { useProtectPage } from '../../Hooks/UseProtectPage'
 import { BaseUrl } from '../../Constants/BaseUrl'
 import Footer from '../../Components/Footer/Footer'
 import { goToSignUpEdit, goToAddressEdit } from '../../Routes/Cordinator'
@@ -13,7 +12,6 @@ import { goToSignUpEdit, goToAddressEdit } from '../../Routes/Cordinator'
 
 function ProfilePage() {
   
-  useProtectPage() //Proteção da página
 
   const history = useHistory()
 
@@ -21,7 +19,7 @@ function ProfilePage() {
   // Função que pega os dados do usuário
   const getProfile = useRequestData(`${BaseUrl}/profile`, undefined)
 
-  console.log(getProfile)
+  // console.log(getProfile)
 
 
 

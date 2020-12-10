@@ -3,7 +3,7 @@
 import styled from "styled-components";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import EditIcon from '@material-ui/icons/Edit'
-import { CircularProgress, LinearProgress } from '@material-ui/core';
+import { CircularProgress } from '@material-ui/core';
 
 // // styled LoginPage //
 

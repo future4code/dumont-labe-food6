@@ -12,9 +12,21 @@ function Footer() {
 
   return (
     <S.Footer>
-      <HomeIcon fontSize="large" onClick={() => goToBuy(history)}/>
-      <LocalGroceryStoreIcon fontSize="large" onClick={() => goToShoppingCart(history)}/>
-      <PersonIcon fontSize="large" onClick={() => goToProfilePage(history)}/>
+      <HomeIcon 
+        fontSize="large"
+        color='secondary'  
+        onClick={() => goToBuy(history)}
+      />
+      <LocalGroceryStoreIcon 
+        fontSize="large" 
+        color='secondary' 
+        onClick={() => goToShoppingCart(history)}
+      />
+      <PersonIcon 
+        fontSize="large" 
+        color='secondary' 
+        onClick={() => goToProfilePage(history)}
+      />
     </S.Footer>
   )
 }
