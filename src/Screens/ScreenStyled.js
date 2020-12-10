@@ -63,8 +63,7 @@ margin-top:10px;
 
 
 export const ChevronLeftIconStyled = styled(ChevronLeftIcon)`
-  margin-top: 0;
-  margin-bottom: 2%;
+  margin-top: 0; 
   margin-left: 4%;
 `
 

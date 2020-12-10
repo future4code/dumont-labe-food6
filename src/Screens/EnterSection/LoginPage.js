@@ -8,10 +8,10 @@ import { login } from '../../Services/User'
 import { TextField, Button } from '@material-ui/core'
 import VisibilityOffIcon from '@material-ui/icons/VisibilityOff'
 import VisibilityIcon from '@material-ui/icons/Visibility'
-import { goToHomePage, goToSignUp } from '../../Routes/Cordinator'
+import { goToSignUp } from '../../Routes/Cordinator'
 import LogoTitle from '../../Assets/logotitle.svg'
 import Header from '../../Components/Header/Header'
-import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
+
 
 
 {/* ------ESTILIZAÇÃO OK -------     */}

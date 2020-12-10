@@ -6,8 +6,7 @@ import { editAddress } from '../../Services/User'
 // import { useProtectPage } from '../../Hooks/UseProtectPage'
 import { TextField, Button } from '@material-ui/core'
 import Header from '../../Components/Header/Header'
-// import { goToSignUp, goToProfilePage } from '../../Routes/Cordinator'
-// import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
+import { goToProfilePage } from '../../Routes/Cordinator'
 
 
 
@@ -41,7 +40,8 @@ function AdressEditPage() {
   return (
     <S.Container>
       <Header title={'Editar Endereço'}/>
-      {/* <ChevronLeftIcon onClick={() => goToProfilePage(history)}/>} */}
+      <S.ChevronLeftIconStyled onClick={() => goToProfilePage(history)}/>
+        <S.LineHeader/>
       <S.FormEditAdress onSubmit={handleSubmit}>
         <TextField 
           value={form.street} 
@@ -61,7 +61,7 @@ function AdressEditPage() {
           label='Número'
           placeholder='email@email.com'
           name='number'
-          type='number'
+          type='text'
           required
         />
         <br />
