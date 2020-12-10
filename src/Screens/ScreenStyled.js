@@ -3,6 +3,7 @@
 import styled from "styled-components";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import EditIcon from '@material-ui/icons/Edit'
+import { CircularProgress, LinearProgress } from '@material-ui/core';
 
 // // styled LoginPage //
 
@@ -65,6 +66,10 @@ margin-top:10px;
 export const ChevronLeftIconStyled = styled(ChevronLeftIcon)`
   margin-top: 0; 
   margin-left: 4%;
+`
+
+export const CircularProgressStyled = styled(CircularProgress)`
+   margin: 65% 45%;
 `
 
 
@@ -767,25 +772,10 @@ export const FormEditSignUp= styled.form`
 
 
 // styled ProfilePage //
-export const ProfileContainer = styled.div`
-  margin-top: 12%;
-  margin-left: 4%;
-  border-bottom: 1px solid gray;
-  border-top: 1px solid gray;
-  &:active{
-    background-color: #EEEEEE;
-  }
-`
-
 export const InfoUserContainer = styled.div`
-  margin-top: 12%;
+  margin-top: 5%;
   margin-left: 4%;
-  border-bottom: 1px solid gray;
-  border-top: 1px solid gray;
   word-break: break-all;
-  &:active{
-    background-color: #EEEEEE;
-  }
 `
 
 export const EditIconStyled= styled(EditIcon)`
@@ -798,19 +788,12 @@ export const EditIconStyled= styled(EditIcon)`
 export const AddressUserContainer = styled.div`
   margin-top: 4%;
   margin-left: 4%;
-  border-bottom: 1px solid gray;
-  &:active{
-    background-color: #EEEEEE;
-  }
+  word-break: break-all;
 ` 
 
 export const HistoryUserContainer = styled.div`
   margin-top: 8%;
   margin-left: 4%;
-  border-bottom: 1px solid gray;
-  &:active{
-    background-color: #EEEEEE;
-  }
 `
 
 

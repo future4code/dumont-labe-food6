@@ -3,7 +3,7 @@ import * as S from '../ScreenStyled'
 import { useHistory } from 'react-router-dom';
 import { useForm } from '../../Hooks/UseForm'
 import { editAddress } from '../../Services/User'
-// import { useProtectPage } from '../../Hooks/UseProtectPage'
+import { useProtectPage } from '../../Hooks/UseProtectPage'
 import { TextField, Button } from '@material-ui/core'
 import Header from '../../Components/Header/Header'
 import { goToProfilePage } from '../../Routes/Cordinator'
@@ -20,7 +20,9 @@ function AdressEditPage() {
     complement: ""
   })
   
-  // useProtectPage() //Proteção da página
+
+  useProtectPage() //Proteção da página
+  
   const history = useHistory()
 
   const handleInputChange = (event) => {

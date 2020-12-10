@@ -3,7 +3,6 @@ import * as S from '../ScreenStyled'
 import { useHistory } from 'react-router-dom';
 import { useForm } from '../../Hooks/UseForm'
 import { signUp } from '../../Services/User'
-// import { useProtectPage } from '../../Hooks/UseProtectPage'
 import { TextField, Button } from '@material-ui/core'
 import VisibilityOffIcon from '@material-ui/icons/VisibilityOff'
 import VisibilityIcon from '@material-ui/icons/Visibility'
@@ -15,7 +14,7 @@ import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 {/* ------ESTILIZAÇÃO OK -------     */}
 
 
-function SignUpPage(props) {
+function SignUpPage() {
   const [showPassword, setShowPassword] = React.useState(false)
 
   const {form, onChange} = useForm({
@@ -25,7 +24,7 @@ function SignUpPage(props) {
     password: ""
   })
   
-  // useProtectPage() //Proteção da página
+ 
   const history = useHistory()
 
   const handleInputChange = (event) => {
