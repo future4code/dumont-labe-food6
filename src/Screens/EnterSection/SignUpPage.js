@@ -54,6 +54,7 @@ function SignUpPage(props) {
     <S.Container>
          <Header  />
          <ChevronLeftIcon onClick={()=>goToLoginPage(history)}/>
+         <S.LineHeader/>
          <S.Logo>
         <S.TitleLogoLogin src={LogoTitle}/>
        
@@ -71,6 +72,7 @@ function SignUpPage(props) {
           name='name'
           type='text'
           required
+          size="small"
         />
         <br />
         <TextField 
@@ -83,6 +85,7 @@ function SignUpPage(props) {
           type='email'
           pattern='[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,}'
           required
+          size="small"
         />
         <br />
         <TextField 
@@ -96,6 +99,7 @@ function SignUpPage(props) {
           type='cpf'
           pattern='\d{3}\.?\d{3}\.?\d{3}-?\d{2}'
           required
+          size="small"
         />
         <br/>
         <TextField 
@@ -107,10 +111,20 @@ function SignUpPage(props) {
           minlength="6"
           name='password'
           required
+          size="small"
           type={showPassword ? 'text' : 'password'}
           InputProps={{
             endAdornment: (
-              showPassword ? <VisibilityIcon onClick={handleShowPassword}/> : <VisibilityOffIcon onClick={handleShowPassword}/>
+              showPassword ? (
+                <VisibilityIcon 
+                  onClick={handleShowPassword} 
+                  fontSize={'small'}
+                /> ) : (
+                <VisibilityOffIcon 
+                  onClick={handleShowPassword} 
+                  fontSize={'small'}
+                />
+              )
             ),
           }}
         />
@@ -123,7 +137,22 @@ function SignUpPage(props) {
           placeholder='Confirme a senha anterior'
           minlength="6"
           name='password'
-          type='password'
+          size="small"
+          type={showPassword ? 'text' : 'password'}
+          InputProps={{
+            endAdornment: (
+              showPassword ? (
+                <VisibilityIcon 
+                  onClick={handleShowPassword} 
+                  fontSize={'small'}
+                /> ) : (
+                <VisibilityOffIcon 
+                  onClick={handleShowPassword} 
+                  fontSize={'small'}
+                />
+              )
+            ),
+          }}
           required
         />
         <br/>

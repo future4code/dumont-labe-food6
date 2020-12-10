@@ -15,7 +15,7 @@ function SignUpEditPage() {
     cpf: ""
   })
   
-  // useProtectPage()
+
   const history = useHistory()
 
  
@@ -31,7 +31,6 @@ function SignUpEditPage() {
     updateProfile(form, history)
     restState()
   }
-
 
 
   return (

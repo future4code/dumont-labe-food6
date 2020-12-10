@@ -43,7 +43,6 @@ function LoginPage() {
     login(form, history)
   }
 
-  
 
 
   // Função para mostrar a senha ou não
@@ -60,7 +59,6 @@ function LoginPage() {
   return (
       <S.Container>
         <Header/>
-        <ChevronLeftIcon onClick={()=>goToHomePage(history)}/>
         <S.Logo>
         <S.TitleLogoLogin src={LogoTitle}/>
         </S.Logo>
@@ -91,7 +89,16 @@ function LoginPage() {
             type={showPassword ? 'text' : 'password'}
             InputProps={{
               endAdornment: (
-                showPassword ? <VisibilityIcon onClick={handleShowPassword}/> : <VisibilityOffIcon onClick={handleShowPassword}/>
+              showPassword ? (
+                <VisibilityIcon 
+                  onClick={handleShowPassword} 
+                  fontSize={'small'}
+                /> ) : (
+                <VisibilityOffIcon 
+                  onClick={handleShowPassword} 
+                  fontSize={'small'}
+                />
+                )
               ),
             }}
           />

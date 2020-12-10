@@ -6,26 +6,25 @@ import { goToBuy, goToAdress, goToProfilePage } from '../Routes/Cordinator'
 
 
 // Função para logar
-export const login = (body, history) =>{
+export const login = (body, history) => {
   axios.post(`${BaseUrl}/login`, body).then ((response) => {
-      localStorage.setItem('user', response.data.user)
+    localStorage.setItem('user', response.data.user)
         
-      if(response.data.user.hasAddress){
-        localStorage.setItem("token", response.data.token);
-        alert(`Olá ${response.data.user.name}! Estou te redirecionando para o feed`)
-        goToBuy(history)
+    if(response.data.user.hasAddress) {
+      localStorage.setItem("token", response.data.token);
+      alert(`Olá ${response.data.user.name}! Estou te redirecionando para o feed`)
+      goToBuy(history)
   
-      } else {
-           localStorage.setItem("token", response.data.token);
-           goToAdress(history);
-        }
-    }).catch(error => {
-        alert('E-mail ou senha inválidos!')
-        console.log(error.message)
-      })
+    } else {
+        localStorage.setItem("token", response.data.token);
+        goToAdress(history);
+    }
+  }).catch(error => {
+      alert('E-mail ou senha inválidos!')
+      console.log(error.message)
+  })
 }
   
-
 
 // Função de cadastro(nome, e-mail, cpf e senha) e cria login(mesmo e-mail e mesma senha)
 export const signUp = (body, history) => {
@@ -83,12 +82,12 @@ export const updateProfile = (body, history) => {
       auth: localStorage.getItem('token')
     }
   }
+
   axios.put(`${BaseUrl}/profile`, body, axiosConfig).then(response => {
       localStorage.setItem('token', response.data.token)
       alert('Editado com sucesso!')
       console.log(response)
       goToProfilePage(history)
-      // console.log(response)
   }).catch(error => {
       console.log(error.message)
       alert('Falha ao editar cadastro :( !')

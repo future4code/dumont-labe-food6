@@ -13,7 +13,7 @@ function HistoryCard() {
         }
     })
 
-//    console.log(getOrdersHistory)
+    //console.log(getOrdersHistory)
 
     return getOrdersHistory ? (
         <div>
