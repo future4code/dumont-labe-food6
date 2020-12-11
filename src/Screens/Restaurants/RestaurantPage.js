@@ -8,12 +8,13 @@ import Hamburguer from '../../Assets/hamburguer.png'
 import MaoSanta from '../../Assets/burguerpqn.jpg'
 import FrenchFries from '../../Assets/frenchfries.jpeg'
 import OnionRings from '../../Assets/onionrings.jpeg'
+import { useHistory } from 'react-router-dom'
 
 
 
-function Restaurant() {
+function Restaurant(props) {
     const [restaurantDetails, setRestaurantDetails] = useState ([])
-   
+    
     const params = useParams()
     
     useEffect (()=>{
@@ -28,13 +29,18 @@ function Restaurant() {
             }
         })
         .then((response) => {
-            setRestaurantDetails(response.data.products)
+            setRestaurantDetails(response.data.restaurant)
+            console.log (response.data.restaurant)
         })
         .catch((error)=>{
             console.log(error)
         })
         
     }
+
+    const history = useHistory()
+    console.log (props.id)
+
     return( 
 
     <S.Container>
