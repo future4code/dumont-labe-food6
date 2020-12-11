@@ -54,7 +54,7 @@ export default function Router() {
         <Route exact path="/carrinho">
           <ShoppingCart />
         </Route>
-        <Route exact path="/restaurantes">
+        <Route exact path="/restaurantes/:id">
           <Restaurant />
         </Route>
         <Route exact path="/confirmacao">

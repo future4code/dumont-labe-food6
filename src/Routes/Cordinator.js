@@ -2,6 +2,10 @@ export const goToBuy =(history)=>{
     history.push('/pagina-principal')
 }
 
+export const goToRestaurantsDetailsPage = (history, id) => {
+    history.push(`/restaurantes/${id}`)
+  }
+
 export const goToLoginPage =(history)=>{
     history.push('/login')
 }

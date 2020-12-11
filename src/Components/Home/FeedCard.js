@@ -1,19 +1,23 @@
 import React from "react";
+import { useHistory } from 'react-router-dom'
 import * as S from "../../Screens/ScreenStyled";
 import Header from "../../Components/Header/Header";
 import Footer from "../../Components/Footer/Footer";
 import search from "../../Assets/search.svg";
 import { BaseUrl } from "../../Constants/BaseUrl";
 import { useRequestData } from "../../Hooks/UseRequestData";
+import { goToRestaurantsDetailsPage } from '../../Routes/Cordinator'
 
 export default function FeedCard(props) {
   const restaurants = useRequestData(`${BaseUrl}/restaurants`, []);
 
   console.log(restaurants);
 
+  const history = useHistory()
+
   return (
     
-    <S.DivisaoPrincipal>
+    <S.DivisaoPrincipal onClick={() => goToRestaurantsDetailsPage(history, props.id)}>
         {/* <Header title={"Rappi4"}/>
         <S.RectangleFeed><img src = {search}/></S.RectangleFeed> */}
     <S.DivText> <S.Text>{props.category} </S.Text> </S.DivText>
