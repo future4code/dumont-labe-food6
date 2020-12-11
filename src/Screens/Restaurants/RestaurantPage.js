@@ -48,7 +48,9 @@ function Restaurant(props) {
     <Header title={"Restaurante"}/>
     <S.RestaurantDetails>
         {restaurantDetails && restaurantDetails.restaurant && restaurantDetails.map((Item)=>{})}
-    <S.image> <img img src = {restaurantDetails.logoUrl}/> </S.image >
+    <S.AreaLogoRest>
+    <S.image src = {restaurantDetails.logoUrl}/> 
+    </S.AreaLogoRest>
     <S.RestaurantTitle> {restaurantDetails.name} </S.RestaurantTitle>
     <S.Burger> {restaurantDetails.category} </S.Burger>
     <S.Areatempo>

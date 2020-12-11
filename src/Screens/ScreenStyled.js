@@ -184,15 +184,16 @@ export const title = styled.div`
   margin: 20px 92px 0 54px;
   padding: 13px 45.5px 12px;
 `;
+export const AreaLogoRest = styled.div`
+display:flex;
+align-items:center;
+margin-left:105px;
+`;
 
-export const image = styled.div`
-  width: 328px;
-  height: 120px;
-  margin: 17px 16px 12px;
-  object-fit: contain;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+export const image = styled.img`
+  width: 150px;
+  height: 150px;
+
 `;
 export const RestaurantTitle = styled.div`
   width: 328px;
