@@ -3,7 +3,6 @@ import * as S from '../ScreenStyled'
 import { useHistory } from 'react-router-dom';
 import { useForm } from '../../Hooks/UseForm'
 import { signUp } from '../../Services/User'
-// import { useProtectPage } from '../../Hooks/UseProtectPage'
 import { TextField, Button } from '@material-ui/core'
 import VisibilityOffIcon from '@material-ui/icons/VisibilityOff'
 import VisibilityIcon from '@material-ui/icons/Visibility'
@@ -15,7 +14,7 @@ import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 {/* ------ESTILIZAÇÃO OK -------     */}
 
 
-function SignUpPage(props) {
+function SignUpPage() {
   const [showPassword, setShowPassword] = React.useState(false)
 
   const {form, onChange} = useForm({
@@ -25,7 +24,7 @@ function SignUpPage(props) {
     password: ""
   })
   
-  // useProtectPage() //Proteção da página
+ 
   const history = useHistory()
 
   const handleInputChange = (event) => {
@@ -54,6 +53,7 @@ function SignUpPage(props) {
     <S.Container>
          <Header  />
          <ChevronLeftIcon onClick={()=>goToLoginPage(history)}/>
+         <S.LineHeader/>
          <S.Logo>
         <S.TitleLogoLogin src={LogoTitle}/>
        
@@ -71,6 +71,7 @@ function SignUpPage(props) {
           name='name'
           type='text'
           required
+          size="small"
         />
         <br />
         <TextField 
@@ -83,6 +84,7 @@ function SignUpPage(props) {
           type='email'
           pattern='[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,}'
           required
+          size="small"
         />
         <br />
         <TextField 
@@ -96,6 +98,7 @@ function SignUpPage(props) {
           type='cpf'
           pattern='\d{3}\.?\d{3}\.?\d{3}-?\d{2}'
           required
+          size="small"
         />
         <br/>
         <TextField 
@@ -107,10 +110,20 @@ function SignUpPage(props) {
           minlength="6"
           name='password'
           required
+          size="small"
           type={showPassword ? 'text' : 'password'}
           InputProps={{
             endAdornment: (
-              showPassword ? <VisibilityIcon onClick={handleShowPassword}/> : <VisibilityOffIcon onClick={handleShowPassword}/>
+              showPassword ? (
+                <VisibilityIcon 
+                  onClick={handleShowPassword} 
+                  fontSize={'small'}
+                /> ) : (
+                <VisibilityOffIcon 
+                  onClick={handleShowPassword} 
+                  fontSize={'small'}
+                />
+              )
             ),
           }}
         />
@@ -123,7 +136,22 @@ function SignUpPage(props) {
           placeholder='Confirme a senha anterior'
           minlength="6"
           name='password'
-          type='password'
+          size="small"
+          type={showPassword ? 'text' : 'password'}
+          InputProps={{
+            endAdornment: (
+              showPassword ? (
+                <VisibilityIcon 
+                  onClick={handleShowPassword} 
+                  fontSize={'small'}
+                /> ) : (
+                <VisibilityOffIcon 
+                  onClick={handleShowPassword} 
+                  fontSize={'small'}
+                />
+              )
+            ),
+          }}
           required
         />
         <br/>

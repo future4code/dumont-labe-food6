@@ -5,11 +5,10 @@ const theme = createMuiTheme({
     palette: {
         primary: {
             main: primaryColor,
-            contrastText: '#fff'
         },
-        // secondary: {
-        //     main: secondaryColor
-        // }
+        secondary: {
+            main: secondaryColor
+        }
     }
 })
 export default theme;

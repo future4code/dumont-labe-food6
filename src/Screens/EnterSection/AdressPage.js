@@ -3,9 +3,9 @@ import * as S from '../ScreenStyled'
 import { useHistory } from 'react-router-dom';
 import { useForm } from '../../Hooks/UseForm'
 import { address } from '../../Services/User'
-// import { useProtectPage } from '../../Hooks/UseProtectPage'
 import { TextField, Button } from '@material-ui/core'
 import Header from '../../Components/Header/Header'
+import { goToSignUp } from '../../Routes/Cordinator'
 
 
 
@@ -19,7 +19,7 @@ function AdressPage() {
     complement: ""
   })
   
-  // useProtectPage() //Proteção da página
+  
   const history = useHistory()
 
   const handleInputChange = (event) => {
@@ -38,7 +38,8 @@ function AdressPage() {
   return (
     <S.Container>
       <Header/>
-        {/* <S.ChevronLeftIconStyled onClick={() => goToSignUp(history)}/> */}
+        <S.ChevronLeftIconStyled onClick={() => goToSignUp(history)}/>
+        <S.LineHeader/>
         <S.FormAdress onSubmit={handleSubmit}>
         <S.TitleAdress>Meu endereço</S.TitleAdress>
         <TextField 
@@ -50,6 +51,7 @@ function AdressPage() {
           name='street'
           type='text'
           required
+          size="small"
         />
         <br />
         <TextField 
@@ -61,6 +63,7 @@ function AdressPage() {
           name='number'
           type='text'
           required
+          size="small"
         />
         <br />
         <TextField 
@@ -71,6 +74,7 @@ function AdressPage() {
           placeholder='Apto./Bloco'
           name='complement'
           type='text'
+          size="small"
         />
         <br/>
         <TextField 
@@ -82,6 +86,7 @@ function AdressPage() {
           name='neighbourhood'
           type='text'
           required
+          size="small"
         />
         <br/>
         <TextField 
@@ -93,6 +98,7 @@ function AdressPage() {
           name='city'
           type='text'
           required
+          size="small"
         />
         <br/>
         <TextField 
@@ -104,6 +110,7 @@ function AdressPage() {
           name='state'
           type='text'
           required
+          size="small"
         />
         <br/>
         <Button

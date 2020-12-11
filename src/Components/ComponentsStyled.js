@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft'
-import { mainGray, mainColor } from '../Constants/Colors';
+import { mainGray, mainColor, secondaryColor } from '../Constants/Colors';
 
 export const Footer = styled.div`
   display: flex;
@@ -10,7 +10,7 @@ export const Footer = styled.div`
   align-items: center;
   padding: 5px;
   box-sizing: border-box;
-  border-top: 1px solid black;
+  border-top: 1px solid ${secondaryColor};
   bottom: 0;
   position: fixed;
    `;
