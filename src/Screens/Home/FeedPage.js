@@ -8,8 +8,10 @@ import { useHistory } from 'react-router-dom'
 export default function FeedPage(props) {
   const restaurants = useRequestData(`${BaseUrl}/restaurants`, []);
   const history = useHistory()
+  console.log (props.id)
   return (
-    <div onClick={() => goToRestaurantsDetailsPage(history, props.id)}>
+    <div>
+      
       {restaurants.map((restaurant) => {
         return (
           <FeedCard
