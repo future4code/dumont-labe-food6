@@ -11,9 +11,10 @@ import { goToRestaurantsDetailsPage } from '../../Routes/Cordinator'
 export default function FeedCard(props) {
   const restaurants = useRequestData(`${BaseUrl}/restaurants`, []);
 
-  console.log(restaurants);
+  // console.log(restaurants);
 
   const history = useHistory()
+  console.log (props.id)
 
   return (
     

@@ -8,12 +8,14 @@ import Hamburguer from '../../Assets/hamburguer.png'
 import MaoSanta from '../../Assets/burguerpqn.jpg'
 import FrenchFries from '../../Assets/frenchfries.jpeg'
 import OnionRings from '../../Assets/onionrings.jpeg'
+import { useHistory } from 'react-router-dom'
+import RestaurantCard from '../../Components/RestaurantCard/RestaurantCard'
 
 
 
-function Restaurant() {
+function Restaurant(props) {
     const [restaurantDetails, setRestaurantDetails] = useState ([])
-   
+    
     const params = useParams()
     
     useEffect (()=>{
@@ -28,48 +30,60 @@ function Restaurant() {
             }
         })
         .then((response) => {
-            setRestaurantDetails(response.data.products)
+            setRestaurantDetails(response.data.restaurant)
+            console.log (response.data.restaurant)
         })
         .catch((error)=>{
             console.log(error)
         })
         
     }
+
+    const history = useHistory()
+    console.log (props.id)
+
     return( 
 
     <S.Container>
     <Header title={"Restaurante"}/>
     <S.RestaurantDetails>
         {restaurantDetails && restaurantDetails.restaurant && restaurantDetails.map((Item)=>{})}
-    <S.image> <img img src = {Hamburguer}/> </S.image >
-    <S.RestaurantTitle> Bullguer Vila Madalena </S.RestaurantTitle>
-    <S.Burger> Burguer </S.Burger>
+    <S.image> <img img src = {restaurantDetails.logoUrl}/> </S.image >
+    <S.RestaurantTitle> {restaurantDetails.name} </S.RestaurantTitle>
+    <S.Burger> {restaurantDetails.category} </S.Burger>
     <S.Areatempo>
-    <S.TempoDeEntrega>50 - 60 min</S.TempoDeEntrega>
-    <S.Frete>Frete R$6,00</S.Frete>
+    <S.TempoDeEntrega>{restaurantDetails.deliveryTime}minutos</S.TempoDeEntrega>
+    <S.Frete>Frete: {restaurantDetails.shipping} reais</S.Frete>
     </S.Areatempo>
-    <S.Endereco>R. Fradique Coutinho, 1136 - Vila Madalena</S.Endereco>
+    <S.Endereco>{restaurantDetails.address}</S.Endereco>
     </S.RestaurantDetails>
     <S.Principais>Principais</S.Principais>
     <hr />
 
     
-        <S.Rectangle>
-        <S.AreaImg>
-        <S.ImgBurguer src = {MaoSanta} />
-        </S.AreaImg>
-        <S.AreaItensLanche>
-        <S.NomeDoItem>Bullguer</S.NomeDoItem>
-        <S.ItensDoLanche>Pão, carne. queijo, picles e molho.</S.ItensDoLanche>
-        <S.Preco>R$20,00</S.Preco>
-        <S.ButtonAdd> <S.Adicionar>adicionar</S.Adicionar></S.ButtonAdd>
-        </S.AreaItensLanche>
         
-    </S.Rectangle>
+        {restaurantDetails && restaurantDetails.products && restaurantDetails.products.map((Item)=>{ 
+            return (
+                <RestaurantCard 
+                restaurant = {Item}
+                key={Item.id}
+                id={Item.id}
+                name={Item.name}
+                Photo={Item.photoUrl}
+                description={Item.description}
+                price={Item.price}
+                
+                />
+        
+        
+    )})}
+        
+        
+    
    
     
 
-    <S.Rectangle>
+    {/* <S.Rectangle>
         <S.AreaImg>
         <S.ImgBurguer src = {Hamburguer} />
         </S.AreaImg>
@@ -109,7 +123,7 @@ function Restaurant() {
         <S.ButtonAdd> <S.Adicionar>adicionar</S.Adicionar></S.ButtonAdd>
         </S.AreaItensLanche>
 
-    </S.Rectangle>
+    </S.Rectangle> */}
     
         
 
