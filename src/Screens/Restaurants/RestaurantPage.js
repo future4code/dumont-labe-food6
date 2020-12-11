@@ -1,4 +1,7 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
+import axios from 'axios'
+import {useParams} from 'react-router-dom'
+import {BaseUrl} from '../../Constants/BaseUrl'
 import * as S from '../ScreenStyled'
 import Header from '../../Components/Header/Header'
 import Hamburguer from '../../Assets/hamburguer.png'
@@ -6,12 +9,38 @@ import MaoSanta from '../../Assets/burguerpqn.jpg'
 import FrenchFries from '../../Assets/frenchfries.jpeg'
 import OnionRings from '../../Assets/onionrings.jpeg'
 
+
+
 function Restaurant() {
+    const [restaurantDetails, setRestaurantDetails] = useState ([])
+   
+    const params = useParams()
+    
+    useEffect (()=>{
+        getRestaurantDetails ()
+    },[])
+
+    const getRestaurantDetails = () => {
+        axios.get (`${BaseUrl}/restaurants/${params.id}`,
+        {
+            headers:{
+                auth:localStorage.getItem ("token")
+            }
+        })
+        .then((response) => {
+            setRestaurantDetails(response.data.products)
+        })
+        .catch((error)=>{
+            console.log(error)
+        })
+        
+    }
     return( 
 
     <S.Container>
     <Header title={"Restaurante"}/>
     <S.RestaurantDetails>
+        {restaurantDetails && restaurantDetails.restaurant && restaurantDetails.map((Item)=>{})}
     <S.image> <img img src = {Hamburguer}/> </S.image >
     <S.RestaurantTitle> Bullguer Vila Madalena </S.RestaurantTitle>
     <S.Burger> Burguer </S.Burger>
@@ -93,6 +122,7 @@ function Restaurant() {
     
     
     )}
+    
   
 
 
