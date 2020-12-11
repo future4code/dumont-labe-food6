@@ -17,7 +17,7 @@ function Restaurant(props) {
     const [restaurantDetails, setRestaurantDetails] = useState ([])
     
     const params = useParams()
-    
+    console.log(restaurantDetails)
     useEffect (()=>{
         getRestaurantDetails ()
     },[])

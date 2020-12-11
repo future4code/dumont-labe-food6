@@ -4,7 +4,7 @@ import Header from "../../Components/Header/Header";
 import search from "../../Assets/search.svg";
 import seta from "../../Assets/seta.svg";
 
-export default function FeedPage() {
+export default function SearchNoResultsPage() {
   return (
     <S.Container>
       <Header title={"Busca"} />
