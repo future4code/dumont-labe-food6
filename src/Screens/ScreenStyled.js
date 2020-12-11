@@ -300,10 +300,15 @@ export const ImgBurguer = styled.img`
 
 export const AreaImg = styled.div`
   display: flex;
-  flex-direction: row;
-  margin: -10px;
-  margin-left: -100px;
+
 `;
+
+export const CardImgComida =styled.img`
+width:100px;
+height:100px;
+margin-left:10px;
+
+`
 
 export const AreaItensLanche = styled.div`
   display: flex;
@@ -359,7 +364,7 @@ export const ButtonAdd = styled.span`
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin: -15px 0 0 100px;
+  margin: 0 auto;
   padding: 8px 20.5px 9px 21.5px;
   color: red;
   cursor: pointer;

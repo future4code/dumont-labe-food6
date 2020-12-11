@@ -4,13 +4,10 @@ import {useParams} from 'react-router-dom'
 import {BaseUrl} from '../../Constants/BaseUrl'
 import * as S from '../ScreenStyled'
 import Header from '../../Components/Header/Header'
-import Hamburguer from '../../Assets/hamburguer.png'
-import MaoSanta from '../../Assets/burguerpqn.jpg'
-import FrenchFries from '../../Assets/frenchfries.jpeg'
-import OnionRings from '../../Assets/onionrings.jpeg'
 import { useHistory } from 'react-router-dom'
 import RestaurantCard from '../../Components/RestaurantCard/RestaurantCard'
-
+import { goToBuy } from '../../Routes/Cordinator'
+import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 
 
 function Restaurant(props) {
@@ -46,6 +43,7 @@ function Restaurant(props) {
 
     <S.Container>
     <Header title={"Restaurante"}/>
+    <ChevronLeftIcon onClick={()=>goToBuy(history)}/>
     <S.RestaurantDetails>
         {restaurantDetails && restaurantDetails.restaurant && restaurantDetails.map((Item)=>{})}
     <S.AreaLogoRest>
