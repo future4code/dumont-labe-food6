@@ -10,7 +10,7 @@ function RestaurantCard(props) {
 
     return (
         
-        <S.Rectangle>
+        <div>
         <S.AreaImg>
         <S.ImgBurguer src = {props.Photo} />
         </S.AreaImg>
@@ -22,7 +22,10 @@ function RestaurantCard(props) {
         </S.AreaItensLanche>
 
              
-        </S.Rectangle>
+        </div>
     )  
 }
+
 export default RestaurantCard;
+
+

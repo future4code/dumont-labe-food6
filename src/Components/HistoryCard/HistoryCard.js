@@ -1,21 +1,42 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import axios from 'axios'
 import * as S from '../ComponentsStyled'
 import { useRequestData } from '../../Hooks/UseRequestData'
 import { BaseUrl } from '../../Constants/BaseUrl'
 
 
-function HistoryCard() {
+function HistoryCard(props) {
+    const [orderHistory, setOrderHistory] = useState ([])
+
+    // Para pegar a data correta do pedido
+    const date = new Date(props.date);
+    let options = { day: "numeric", month: "long", year: "numeric" };
+    const newDate = date.toLocaleDateString("pt-PT", options);
+    const formatDate = newDate.split("de ");
+
+    
     
    // Função para pegar o histórico de pedidos
-   const getOrdersHistory = useRequestData(`${BaseUrl}/orders/history`,  {
-        headers: {
-        auth: localStorage.getItem("token")
-        }
-    })
+    useEffect (() => {
+        getOrdersHistory ()
+    },[])
 
-    //console.log(getOrdersHistory)
+    const getOrdersHistory  = () => {
+        axios.get(`${BaseUrl}/orders/history`,
+        {
+            headers:{
+                auth:localStorage.getItem ("token")
+            }
+        })
+        .then((response) => {
+            setOrderHistory(response.data)
+        })
+        .catch((error)=>{
+            console.log(error)
+        }) 
+    }
 
-    return getOrdersHistory ? (
+    return orderHistory ? (
         <div>
             <S.noOrdersMessage> 
               Você não realizou nenhum pedido!
@@ -25,23 +46,13 @@ function HistoryCard() {
         <S.HistoryContainer>
             <S.InfoHistory>
                 <S.NameOrder fontSize={16}>
-                    Batata frita
+                  {orderHistory.name}
                 </S.NameOrder>
-                <p>30 de setembro 2019</p>
+                <p>{formatDate}</p>
                 <S.Price fontSize={18}>
-                    SUBTOTAL R$89,00
+                    SUBTOTAL R${orderHistory.totalPrice}
                 </S.Price>
             </S.InfoHistory>
-
-             <S.InfoHistory>
-                    <S.NameOrder fontSize={16}>
-                        Batata frita
-                    </S.NameOrder>
-                    <p>30 de setembro 2019</p>
-                    <S.Price fontSize={18}>
-                        SUBTOTAL R$89,00
-                    </S.Price>
-            </S.InfoHistory>  
         </S.HistoryContainer>
     )  
 }
