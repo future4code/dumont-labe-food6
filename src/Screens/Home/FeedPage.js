@@ -31,6 +31,7 @@ export default function FeedPage(props) {
             description={restaurant.description}
             deliveryTime={restaurant.deliveryTime}
             shipping={restaurant.shipping}
+            
                      />
                   
         );
