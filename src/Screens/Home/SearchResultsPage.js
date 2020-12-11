@@ -6,7 +6,7 @@ import burguer from "../../Assets/burguer.jpg";
 import hamburguer from "../../Assets/hamburguer.png";
 import seta from "../../Assets/seta.svg";
 
-export default function FeedPage() {
+export default function SearchResultsPage() {
   return (
   
   <S.Container>

@@ -25,4 +25,4 @@ function RestaurantCard(props) {
         </S.Rectangle>
     )  
 }
-export default Regit adstaurantCard
+export default RestaurantCard;

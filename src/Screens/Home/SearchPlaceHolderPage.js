@@ -1,20 +1,11 @@
 import React from "react";
 import * as S from "../ScreenStyled";
-import Header from "../../Components/Header/Header";
-import search from "../../Assets/search.svg";
-import seta from "../../Assets/seta.svg";
+import SearchPlaceHolderCard  from "../../Components/Home/SearchPlaceHolderCard"
 
-export default function FeedPage() {
+export default function SearchPlaceHolderPage() {
   return (
     <S.Container>
-      <Header title={"Busca"} />
-      <S.Seta>
-        <img img src={seta} />
-      </S.Seta>
-      <S.RectangleFeed>
-        <img img src={search} />
-      </S.RectangleFeed>
-      <S.TextCopy>Busque por nome de restaurante</S.TextCopy>
+      <SearchPlaceHolderCard />
     </S.Container>
   );
 }
