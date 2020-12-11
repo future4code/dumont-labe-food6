@@ -751,22 +751,13 @@ export const Seta = styled.div`
 // Final styled Search Place Holder Page //
 
 // styled AdressEditPage //
-export const AdressEditContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  width: 96%;
-  max-width: 465px;
-  margin: 0 auto;
-`;
-
 export const FormEditAdress = styled.form`
   display: flex;
   flex-direction: column;
   height: 20vh;
   width: 335px;
   justify-content: space-around;
-  margin-top: 50%;
+  margin-top: 54%;
   margin-left: 3%;
   margin-bottom: 5%;
 `;
@@ -783,18 +774,8 @@ export const FormEditSignUp = styled.form`
   margin-bottom: 5%;
 `;
 
+
 // styled ProfilePage //
-
-export const ProfileContainer = styled.div`
-  margin-top: 12%;
-  margin-left: 4%;
-  border-bottom: 1px solid gray;
-  border-top: 1px solid gray;
-  &:active {
-    background-color: #eeeeee;
-  }
-`;
-
 export const InfoUserContainer = styled.div`
   margin-top: 5%;
   margin-left: 4%;
@@ -814,7 +795,6 @@ export const EditIconStyled = styled(EditIcon)`
 export const AddressUserContainer = styled.div`
   margin-top: 4%;
   margin-left: 4%;
-  border-bottom: 1px solid gray;
   &:active {
  background-color: #eeeeee;
  word-break: break-all;
@@ -824,12 +804,11 @@ export const AddressUserContainer = styled.div`
 export const HistoryUserContainer = styled.div`
   margin-top: 8%;
   margin-left: 4%;
-  border-bottom: 1px solid gray;
   &:active {
     background-color: #eeeeee;
   }
 `;
 
-// styled AdressPage //
+
 
 
