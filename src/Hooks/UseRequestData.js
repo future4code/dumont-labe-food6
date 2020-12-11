@@ -14,7 +14,7 @@
          },
        })
        .then((response) => {
-         setData(response.data);
+         setData(response.data.restaurants);
        })
        .catch((err) => {
          console.log(err.message);

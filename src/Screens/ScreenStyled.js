@@ -2,8 +2,9 @@
 
 import styled from "styled-components";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
-import EditIcon from '@material-ui/icons/Edit'
+import EditIcon from "@material-ui/icons/Edit";
 import { CircularProgress } from '@material-ui/core';
+
 
 // // styled LoginPage //
 
@@ -19,8 +20,6 @@ export const TitleLogo = styled.img`
   width: 70px;
 `;
 
-
-
 // styled LoginPage & SignUpPage OK//
 
 export const FormInputsLogin = styled.form`
@@ -32,7 +31,7 @@ export const FormInputsLogin = styled.form`
   margin-top: 20%;
   margin-left: 3%;
   margin-bottom: 5%;
-`
+`;
 export const FormInputsSignUp = styled.form`
   display: flex;
   flex-direction: column;
@@ -41,89 +40,88 @@ export const FormInputsSignUp = styled.form`
   justify-content: space-around;
   margin-top: 32%;
   margin-left: 3%;
-  margin-bottom: 2%;
-`
-export const TitleLogoLogin = styled.img`
- width: 150px;
- `
-export const P=styled.p`
-text-align:center;
-`
-export const Logo = styled.div`
-display:flex;
-align-items:center;
-justify-content:center;
- `
-export const AreaButton = styled.div`
-display:flex;
-align-items:center;
-justify-content:center;
-flex-direction:column;
-margin-top:10px;
- `
+  margin-bottom: 5%;
+`;
 
+export const TitleLogoLogin = styled.img`
+  width: 150px;
+`;
+export const P = styled.p`
+  text-align: center;
+`;
+export const Logo = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+export const AreaButton = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 10px;
+`;
 
 export const ChevronLeftIconStyled = styled(ChevronLeftIcon)`
-  margin-top: 0; 
-  margin-left: 4%;
-`
+  margin: 0;
+  margin-bottom: 2%;
+`;
 
 export const CircularProgressStyled = styled(CircularProgress)`
    margin: 65% 45%;
-`
-
+`;
 
 // styled ShoppingCart //
 export const DeliveryAddress = styled.div`
   background-color: #eeeeee;
   padding: 5px 10px;
-    p{
-      line-height: 0.3;
-    }
-    p:nth-child(1){
-      font-size: 14px;
-      color: #b8b8b8;
-    }
-    p:nth-child(2){
-      font-size: 15px;
-    }
+  p {
+    line-height: 0.3;
+  }
+  p:nth-child(1) {
+    font-size: 14px;
+    color: #b8b8b8;
+  }
+  p:nth-child(2) {
+    font-size: 15px;
+  }
 `;
 
 export const RestaurantAddress = styled.div`
   padding: 0 10px;
-  p{
+  p {
     line-height: 0.5;
     font-size: 14px;
   }
-  p:nth-child(1){
+  p:nth-child(1) {
     color: #e86e5a;
-    }
-  p:nth-child(n+2){
+  }
+  p:nth-child(n + 2) {
     font-size: 14px;
     color: #b8b8b8;
   }
-  `;
+`;
 
 export const Payment = styled.div`
   padding: 0 10px;
   font-size: 15px;
-  p{
+  p {
     line-height: 0;
   }
-  p:nth-child(1){
+  p:nth-child(1) {
     display: flex;
     justify-content: flex-end;
   }
-  `;
+`;
 
 export const Subtotal = styled.div`
   display: flex;
   justify-content: space-between;
   margin-bottom: 25px;
-  p:nth-child(2){
+  p:nth-child(2) {
     color: #e86e5a;
   }
-  `;
+`;
 
 export const ConfirmButton = styled.div`
   display: flex;
@@ -131,20 +129,19 @@ export const ConfirmButton = styled.div`
   width: 330px;
   margin: 0 auto;
   margin-top: 10px;
- `
-
-export const Container = styled.div`
- height:640px;
- width:360px;
- position: fixed;
- top: 50%;
- left: 50%;
- transform: translate(-50%, -50%);
- box-sizing: border-box;
- border: 1px solid black;
- overflow-y: auto; 
 `;
 
+export const Container = styled.div`
+  height: 640px;
+  width: 360px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  border: 1px solid black;
+  overflow-y: auto;
+`;
 
 export const ContainerHome = styled.div`
   background-color: #e86e5a;
@@ -170,25 +167,23 @@ export const ImgLogo = styled.img`
   }
 `;
 
-export const RestaurantDetails = styled.div`  
+export const RestaurantDetails = styled.div`
   height: 280px;
   display: flex;
   flex-direction: column;
   text-align: left;
   width: 360px;
   max-width: 465px;
-  margin:0;
+  margin: 0;
   /* border: 1px solid black; */
   box-sizing: border-box;
-  
-`
-
+`;
 
 export const title = styled.div`
   height: 44px;
   margin: 20px 92px 0 54px;
   padding: 13px 45.5px 12px;
-`
+`;
 
 export const image = styled.div`
   width: 328px;
@@ -198,7 +193,7 @@ export const image = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-`
+`;
 export const RestaurantTitle = styled.div`
   width: 328px;
   height: 18px;
@@ -211,8 +206,8 @@ export const RestaurantTitle = styled.div`
   line-height: normal;
   letter-spacing: -0.39px;
   color: #e86e5a;
-`
-export const Burger  = styled.div`
+`;
+export const Burger = styled.div`
   width: 104px;
   height: 18px;
   margin: 8px 8px 8px 16px;
@@ -224,14 +219,13 @@ export const Burger  = styled.div`
   line-height: normal;
   letter-spacing: -0.39px;
   color: #b8b8b8;
-`
-export const Areatempo  = styled.div`
-display:flex;
-flex-direction:row;
-`
+`;
+export const Areatempo = styled.div`
+  display: flex;
+  flex-direction: row;
+`;
 
-
-export const TempoDeEntrega  = styled.p`
+export const TempoDeEntrega = styled.p`
   width: 104px;
   height: 18px;
   margin: 8px 8px 10px 16px;
@@ -243,10 +237,9 @@ export const TempoDeEntrega  = styled.p`
   line-height: normal;
   letter-spacing: -0.39px;
   color: #b8b8b8;
-`
+`;
 
-
-export const Frete  = styled.p`
+export const Frete = styled.p`
   width: 104px;
   height: 18px;
   margin: 8px 128px 10px 8px;
@@ -258,10 +251,9 @@ export const Frete  = styled.p`
   line-height: normal;
   letter-spacing: -0.39px;
   color: #b8b8b8;
-`
+`;
 
-
-export const Endereco  = styled.div`
+export const Endereco = styled.div`
   width: 328px;
   height: 18px;
   margin: 10px 16px 16px;
@@ -273,7 +265,7 @@ export const Endereco  = styled.div`
   line-height: normal;
   letter-spacing: -0.39px;
   color: #b8b8b8;
-`
+`;
 
 export const Principais = styled.p`
   width: 328px;
@@ -287,44 +279,38 @@ export const Principais = styled.p`
   line-height: normal;
   letter-spacing: -0.39px;
   color: var(--black);
+`;
 
-`
-
-
-export const Rectangle = styled.div` 
+export const Rectangle = styled.div`
   width: 210px;
   height: 112px;
   margin: 7px 15px 5px;
   padding: 18px 0 0 113px;
   border-radius: 8px;
   border: solid 1px #b8b8b8;
-  display:flex;
+  display: flex;
   justify-content: space-between;
-  
-  
-  
-`
+`;
 
-
-export const ImgBurguer = styled.img` 
+export const ImgBurguer = styled.img`
   width: 97px;
-  height: 113px;    
-`
+  height: 113px;
+`;
 
 export const AreaImg = styled.div`
-display:flex;
-flex-direction:row;
-margin:-10px;
-margin-left:-100px;
-`
+  display: flex;
+  flex-direction: row;
+  margin: -10px;
+  margin-left: -100px;
+`;
 
-export const AreaItensLanche  = styled.div`
-display:flex;
-flex-direction:column;
-margin-left:30px;
-`
+export const AreaItensLanche = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-left: 30px;
+`;
 
-export const NomeDoItem = styled.p` 
+export const NomeDoItem = styled.p`
   width: 166px;
   height: 18px;
   margin: 0 49px 6px 0;
@@ -336,9 +322,9 @@ export const NomeDoItem = styled.p`
   line-height: normal;
   letter-spacing: -0.39px;
   color: #e86e5a;
-`
+`;
 
-export const ItensDoLanche = styled.p` 
+export const ItensDoLanche = styled.p`
   width: 198px;
   height: 30px;
   margin: 6px 17px 6px 0;
@@ -350,9 +336,9 @@ export const ItensDoLanche = styled.p`
   line-height: normal;
   letter-spacing: -0.34px;
   color: #b8b8b8;
-`
+`;
 
-export const Preco = styled.p` 
+export const Preco = styled.p`
   width: 108px;
   height: 19px;
   margin: 6px 17px 15px 0;
@@ -364,65 +350,65 @@ export const Preco = styled.p`
   line-height: normal;
   letter-spacing: -0.39px;
   color: var(--black);
-`
+`;
 
-export const ButtonAdd = styled.span` 
+export const ButtonAdd = styled.span`
   width: 40px;
   height: 5px;
-  display:flex;
-  flex-direction:row;
-  align-items:center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   margin: -15px 0 0 100px;
-  padding: 8px 20.5px 9px 21.5px;    
-  color:red;
-  cursor:pointer;
+  padding: 8px 20.5px 9px 21.5px;
+  color: red;
+  cursor: pointer;
   border-radius: 8px;
-  border: solid 1px 
-`
+  border: solid 1px;
+`;
 
-export const Adicionar = styled.div` 
- width: 48px;
- height: 14px;
- font-family: Roboto;
-font-size: 12px;
-font-weight: normal;
-font-stretch: normal;
-font-style: normal;
-line-height: normal;
-letter-spacing: -0.29px;
-text-align: center;
-color: red;
-`
+export const Adicionar = styled.div`
+  width: 48px;
+  height: 14px;
+  font-family: Roboto;
+  font-size: 12px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.29px;
+  text-align: center;
+  color: red;
+`;
 
-export const ButtonAddR = styled.span` 
+export const ButtonAddR = styled.span`
   width: 40px;
   height: 5px;
-  display:flex;
-  flex-direction:row;
-  align-items:center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   margin: -20px 0 0 100px;
-  padding: 8px 20.5px 9px 21.5px;    
-  color:black;
-  cursor:pointer;
+  padding: 8px 20.5px 9px 21.5px;
+  color: black;
+  cursor: pointer;
   border-radius: 8px;
-  border: solid 1px 
-`
+  border: solid 1px;
+`;
 
-export const Remover = styled.div` 
-width: 48px;
- height: 14px;
- font-family: Roboto;
-font-size: 12px;
-font-weight: normal;
-font-stretch: normal;
-font-style: normal;
-line-height: normal;
-letter-spacing: -0.29px;
-text-align: center;
-color: black
-`
+export const Remover = styled.div`
+  width: 48px;
+  height: 14px;
+  font-family: Roboto;
+  font-size: 12px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.29px;
+  text-align: center;
+  color: black;
+`;
 
-export const Acompanhamentos  = styled.div`
+export const Acompanhamentos = styled.div`
   width: 328px;
   height: 18px;
   margin: 16px 16px 8px;
@@ -434,7 +420,7 @@ export const Acompanhamentos  = styled.div`
   line-height: normal;
   letter-spacing: -0.39px;
   color: var(--black);
-`
+`;
 
 // styled RestaurantPage //
 
@@ -447,15 +433,14 @@ export const ConfirmationContainer = styled.div`
   padding: 11px 0 68px;
   background-color: white;
   border: solid 1px black;
-  
-`
+`;
+
 export const TitleConfirmation = styled.p`
   width: 360px;
   height: 42px;
   margin: 28px 0 52px;
   padding: 6px 50px 12px 16px;
-  
-`
+`;
 
 export const ConfirmationText = styled.p`
   width: 296px;
@@ -463,17 +448,18 @@ export const ConfirmationText = styled.p`
   margin: 6px 0 100 16px;
   font-family: Roboto;
   font-size: 16px;
-  `
-  export const ConfirmationContainerSmall = styled.div`
+`;
+
+export const ConfirmationContainerSmall = styled.div`
   width: 260px;
   height: 30px;
   margin: 9px 16px 0;
   padding: 16px;
   border-radius: 4px;
   border: solid 1px black;
-  display:flex;
-  justify-content:space-between;
-`
+  display: flex;
+  justify-content: space-between;
+`;
 
 export const Contador = styled.p`
   width: 232px;
@@ -487,18 +473,17 @@ export const Contador = styled.p`
   line-height: normal;
   letter-spacing: -0.39px;
   color: var(--black);
-`
+`;
 
 export const dropdown = styled.img`
   width: 24px;
   height: 24px;
   margin: 0 0 0 8px;
   object-fit: contain;
-  cursor:pointer;
+  cursor: pointer;
+`;
 
-`
-
-export const AdicionarAoCarrinho= styled.button`
+export const AdicionarAoCarrinho = styled.button`
   width: 220px;
   height: 19px;
   margin: 7px 16px 16px;
@@ -512,17 +497,33 @@ export const AdicionarAoCarrinho= styled.button`
   color: var(--black);
   text-align: right;
   color: #4a90e2;
-  display:flex;
-  flex-direction:row;
-  justify-content:flex-end;
-  align-self:flex-end;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-self: flex-end;
 `;
 
-
 // styled AdressPage //
-export const FormAdress = styled.form`
+
+export const AdressContainer = styled.div`
   display: flex;
   flex-direction: column;
+  text-align: center;
+  width: 96%;
+  max-width: 465px;
+  margin: 0 auto;
+`;
+
+// export const AdressContainer = styled.div
+//   display: flex;
+//   flex-direction: column;
+//   text-align: center;
+//   width: 96%;
+//   max-width: 465px;
+//   margin: 0 auto;
+//
+
+export const FormAdress = styled.form`
   height: 20vh;
   width: 335px;
   justify-content: space-around;
@@ -535,11 +536,12 @@ export const TitleAdress = styled.p`
   font-family: Roboto, Helvetica, sans-serif;
   font-size: 16px;
   margin: 60% 34% 6%;
+
 `;
 
 export const LineHeader = styled.hr`
   width: 97%;
-`
+`;
 
 
 
@@ -553,18 +555,8 @@ export const RectangleFeed = styled.p`
   border: solid 1px #b8b8b8;
 `;
 export const Text = styled.p`
-  width: 87px;
-  height: 18px;
-  margin: 0 8px 0 0;
-  font-family: Roboto;
-  font-size: 16px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: -0.39px;
-  text-align: center;
-  color: #e86e5a;
+  display: flex;
+  justify-content: center;
 `;
 
 export const TextCopy = styled.p`
@@ -600,7 +592,12 @@ export const TextCopy3 = styled.p`
 
 export const DivText = styled.div`
   display: flex;
-// não consegui deixar os titulos alinhados.
+`;
+
+export const DivisaoPrincipal = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 export const DivTextDeliveryFee = styled.p`
@@ -609,14 +606,14 @@ export const DivTextDeliveryFee = styled.p`
   position: relative;
 `;
 export const ScreenShot = styled.img`
-  width: 358px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
   margin: 20 0 18px;
   object-fit: contain;
 `;
 
 export const ScreenShot2 = styled.img`
-  width: 359px;
+  width: 200px;
   height: auto;
   margin: 0 0 12px;
   object-fit: contain;
@@ -628,6 +625,7 @@ export const Rest = styled.p`
   width: 296px;
   height: 18px;
   margin: 12px 16px 4px;
+  text-align: center;
   font-family: Roboto;
   font-size: 16px;
   font-weight: normal;
@@ -681,8 +679,13 @@ export const deliveryFee = styled.p`
   font-style: normal;
   line-height: normal;
   letter-spacing: -0.39px;
-  text-align: right;
+  text-align: left;
   color: #b8b8b8;
+`;
+
+export const Description = styled.p`
+  font-family: Roboto;
+  font-size: 16px;
 `;
 
 export const deliveryFee2 = styled.p`
@@ -718,23 +721,34 @@ export const Time2 = styled.p`
   color: #b8b8b8;
 `;
 
+export const DivContainer2 = styled.div`
+  display: flex;
+  justify-content: center;
+`;
+
+export const TextCategory = styled.p`
+  display: flex;
+  justify-content: center;
+`;
+
+export const TextCategory2 = styled.p`
+  display: flex;
+  align-items: flex-start;
+`;
+
 // Final styled FeedPage //
 
 // styled Search Place Holder Page //
 
 export const Seta = styled.div`
-width: 23px;
-height: 24px;
-margin: 10px 54px 10px 16px;
-bottom: 40px;
-position: relative;
-
+  width: 23px;
+  height: 24px;
+  margin: 10px 54px 10px 16px;
+  bottom: 40px;
+  position: relative;
 `;
 
-
 // Final styled Search Place Holder Page //
-
-
 
 // styled AdressEditPage //
 export const AdressEditContainer = styled.div`
@@ -744,9 +758,9 @@ export const AdressEditContainer = styled.div`
   width: 96%;
   max-width: 465px;
   margin: 0 auto;
-`
+`;
 
-export const FormEditAdress= styled.form`
+export const FormEditAdress = styled.form`
   display: flex;
   flex-direction: column;
   height: 20vh;
@@ -755,11 +769,10 @@ export const FormEditAdress= styled.form`
   margin-top: 50%;
   margin-left: 3%;
   margin-bottom: 5%;
-`
-
+`;
 
 // styled SignUpEditPage //
-export const FormEditSignUp= styled.form`
+export const FormEditSignUp = styled.form`
   display: flex;
   flex-direction: column;
   height: 20vh;
@@ -768,36 +781,55 @@ export const FormEditSignUp= styled.form`
   margin-top: 32%;
   margin-left: 3%;
   margin-bottom: 5%;
-`
-
+`;
 
 // styled ProfilePage //
+
+export const ProfileContainer = styled.div`
+  margin-top: 12%;
+  margin-left: 4%;
+  border-bottom: 1px solid gray;
+  border-top: 1px solid gray;
+  &:active {
+    background-color: #eeeeee;
+  }
+`;
+
 export const InfoUserContainer = styled.div`
   margin-top: 5%;
   margin-left: 4%;
   word-break: break-all;
-`
+  &:active {
+    background-color: #eeeeee;
+  }
+`;
 
-export const EditIconStyled= styled(EditIcon)`
+export const EditIconStyled = styled(EditIcon)`
   float: right;
   margin-top: 4%;
   margin-right: 5%;
   margin-left: 15%;
-`
+`;
 
 export const AddressUserContainer = styled.div`
   margin-top: 4%;
   margin-left: 4%;
-  word-break: break-all;
-` 
+  border-bottom: 1px solid gray;
+  &:active {
+ background-color: #eeeeee;
+ word-break: break-all;
+  }
+`;
 
 export const HistoryUserContainer = styled.div`
   margin-top: 8%;
   margin-left: 4%;
-`
+  border-bottom: 1px solid gray;
+  &:active {
+    background-color: #eeeeee;
+  }
+`;
 
-
-
-
+// styled AdressPage //
 
 
